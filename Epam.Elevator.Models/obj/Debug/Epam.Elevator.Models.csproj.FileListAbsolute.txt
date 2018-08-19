@@ -1,0 +1,18 @@
+C:\Users\Shruthi_Nadigoti\source\repos\Epam.ElevatorSolution\Epam.Elevator.Models\bin\Debug\Epam.Elevator.Models.dll
+C:\Users\Shruthi_Nadigoti\source\repos\Epam.ElevatorSolution\Epam.Elevator.Models\bin\Debug\Epam.Elevator.Models.pdb
+C:\Users\Shruthi_Nadigoti\source\repos\Epam.ElevatorSolution\Epam.Elevator.Models\obj\Debug\Epam.Elevator.Models.csprojAssemblyReference.cache
+C:\Users\Shruthi_Nadigoti\source\repos\Epam.ElevatorSolution\Epam.Elevator.Models\obj\Debug\Epam.Elevator.Models.csproj.CoreCompileInputs.cache
+C:\Users\Shruthi_Nadigoti\source\repos\Epam.ElevatorSolution\Epam.Elevator.Models\obj\Debug\Epam.Elevator.Models.dll
+C:\Users\Shruthi_Nadigoti\source\repos\Epam.ElevatorSolution\Epam.Elevator.Models\obj\Debug\Epam.Elevator.Models.pdb
+C:\Users\Shruthi_Nadigoti\source\repos\Epam.ElevatorSolution - Copy\Epam.Elevator.Models\bin\Debug\Epam.Elevator.Models.dll
+C:\Users\Shruthi_Nadigoti\source\repos\Epam.ElevatorSolution - Copy\Epam.Elevator.Models\bin\Debug\Epam.Elevator.Models.pdb
+C:\Users\Shruthi_Nadigoti\source\repos\Epam.ElevatorSolution - Copy\Epam.Elevator.Models\obj\Debug\Epam.Elevator.Models.csprojAssemblyReference.cache
+C:\Users\Shruthi_Nadigoti\source\repos\Epam.ElevatorSolution - Copy\Epam.Elevator.Models\obj\Debug\Epam.Elevator.Models.csproj.CoreCompileInputs.cache
+C:\Users\Shruthi_Nadigoti\source\repos\Epam.ElevatorSolution - Copy\Epam.Elevator.Models\obj\Debug\Epam.Elevator.Models.dll
+C:\Users\Shruthi_Nadigoti\source\repos\Epam.ElevatorSolution - Copy\Epam.Elevator.Models\obj\Debug\Epam.Elevator.Models.pdb
+C:\Users\SURATHI\Videos\EPAM_Assignments\DOT-NET\Elevator-master-4e741c6aa5c5cc1f2d84a991b7f9780321a00125\Epam.Elevator.Models\bin\Debug\Epam.Elevator.Models.dll
+C:\Users\SURATHI\Videos\EPAM_Assignments\DOT-NET\Elevator-master-4e741c6aa5c5cc1f2d84a991b7f9780321a00125\Epam.Elevator.Models\bin\Debug\Epam.Elevator.Models.pdb
+C:\Users\SURATHI\Videos\EPAM_Assignments\DOT-NET\Elevator-master-4e741c6aa5c5cc1f2d84a991b7f9780321a00125\Epam.Elevator.Models\obj\Debug\Epam.Elevator.Models.csprojAssemblyReference.cache
+C:\Users\SURATHI\Videos\EPAM_Assignments\DOT-NET\Elevator-master-4e741c6aa5c5cc1f2d84a991b7f9780321a00125\Epam.Elevator.Models\obj\Debug\Epam.Elevator.Models.csproj.CoreCompileInputs.cache
+C:\Users\SURATHI\Videos\EPAM_Assignments\DOT-NET\Elevator-master-4e741c6aa5c5cc1f2d84a991b7f9780321a00125\Epam.Elevator.Models\obj\Debug\Epam.Elevator.Models.dll
+C:\Users\SURATHI\Videos\EPAM_Assignments\DOT-NET\Elevator-master-4e741c6aa5c5cc1f2d84a991b7f9780321a00125\Epam.Elevator.Models\obj\Debug\Epam.Elevator.Models.pdb

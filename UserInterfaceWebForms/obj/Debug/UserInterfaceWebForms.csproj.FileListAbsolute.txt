@@ -1,0 +1,176 @@
+C:\Users\Shruthi_Nadigoti\source\repos\Epam.ElevatorSolution\UserInterfaceWebForms\obj\Debug\UserInterfaceWebForms.csprojAssemblyReference.cache
+C:\Users\Shruthi_Nadigoti\source\repos\Epam.ElevatorSolution\UserInterfaceWebForms\obj\Debug\UserInterfaceWebForms.csproj.CoreCompileInputs.cache
+C:\Users\Shruthi_Nadigoti\source\repos\Epam.ElevatorSolution\UserInterfaceWebForms\bin\ApplicationInsights.config
+C:\Users\Shruthi_Nadigoti\source\repos\Epam.ElevatorSolution\UserInterfaceWebForms\bin\UserInterfaceWebForms.dll.config
+C:\Users\Shruthi_Nadigoti\source\repos\Epam.ElevatorSolution\UserInterfaceWebForms\bin\UserInterfaceWebForms.dll
+C:\Users\Shruthi_Nadigoti\source\repos\Epam.ElevatorSolution\UserInterfaceWebForms\bin\UserInterfaceWebForms.pdb
+C:\Users\Shruthi_Nadigoti\source\repos\Epam.ElevatorSolution\UserInterfaceWebForms\bin\roslyn\csc.exe
+C:\Users\Shruthi_Nadigoti\source\repos\Epam.ElevatorSolution\UserInterfaceWebForms\bin\roslyn\csc.exe.config
+C:\Users\Shruthi_Nadigoti\source\repos\Epam.ElevatorSolution\UserInterfaceWebForms\bin\roslyn\csc.rsp
+C:\Users\Shruthi_Nadigoti\source\repos\Epam.ElevatorSolution\UserInterfaceWebForms\bin\roslyn\csi.exe
+C:\Users\Shruthi_Nadigoti\source\repos\Epam.ElevatorSolution\UserInterfaceWebForms\bin\roslyn\csi.exe.config
+C:\Users\Shruthi_Nadigoti\source\repos\Epam.ElevatorSolution\UserInterfaceWebForms\bin\roslyn\csi.rsp
+C:\Users\Shruthi_Nadigoti\source\repos\Epam.ElevatorSolution\UserInterfaceWebForms\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Shruthi_Nadigoti\source\repos\Epam.ElevatorSolution\UserInterfaceWebForms\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Shruthi_Nadigoti\source\repos\Epam.ElevatorSolution\UserInterfaceWebForms\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\Shruthi_Nadigoti\source\repos\Epam.ElevatorSolution\UserInterfaceWebForms\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Shruthi_Nadigoti\source\repos\Epam.ElevatorSolution\UserInterfaceWebForms\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\Shruthi_Nadigoti\source\repos\Epam.ElevatorSolution\UserInterfaceWebForms\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Shruthi_Nadigoti\source\repos\Epam.ElevatorSolution\UserInterfaceWebForms\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Shruthi_Nadigoti\source\repos\Epam.ElevatorSolution\UserInterfaceWebForms\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\Shruthi_Nadigoti\source\repos\Epam.ElevatorSolution\UserInterfaceWebForms\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\Shruthi_Nadigoti\source\repos\Epam.ElevatorSolution\UserInterfaceWebForms\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Shruthi_Nadigoti\source\repos\Epam.ElevatorSolution\UserInterfaceWebForms\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\Users\Shruthi_Nadigoti\source\repos\Epam.ElevatorSolution\UserInterfaceWebForms\bin\roslyn\System.AppContext.dll
+C:\Users\Shruthi_Nadigoti\source\repos\Epam.ElevatorSolution\UserInterfaceWebForms\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Shruthi_Nadigoti\source\repos\Epam.ElevatorSolution\UserInterfaceWebForms\bin\roslyn\System.Console.dll
+C:\Users\Shruthi_Nadigoti\source\repos\Epam.ElevatorSolution\UserInterfaceWebForms\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\Shruthi_Nadigoti\source\repos\Epam.ElevatorSolution\UserInterfaceWebForms\bin\roslyn\System.Diagnostics.Process.dll
+C:\Users\Shruthi_Nadigoti\source\repos\Epam.ElevatorSolution\UserInterfaceWebForms\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\Shruthi_Nadigoti\source\repos\Epam.ElevatorSolution\UserInterfaceWebForms\bin\roslyn\System.IO.Compression.dll
+C:\Users\Shruthi_Nadigoti\source\repos\Epam.ElevatorSolution\UserInterfaceWebForms\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\Shruthi_Nadigoti\source\repos\Epam.ElevatorSolution\UserInterfaceWebForms\bin\roslyn\System.IO.FileSystem.DriveInfo.dll
+C:\Users\Shruthi_Nadigoti\source\repos\Epam.ElevatorSolution\UserInterfaceWebForms\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\Shruthi_Nadigoti\source\repos\Epam.ElevatorSolution\UserInterfaceWebForms\bin\roslyn\System.IO.Pipes.dll
+C:\Users\Shruthi_Nadigoti\source\repos\Epam.ElevatorSolution\UserInterfaceWebForms\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Shruthi_Nadigoti\source\repos\Epam.ElevatorSolution\UserInterfaceWebForms\bin\roslyn\System.Security.AccessControl.dll
+C:\Users\Shruthi_Nadigoti\source\repos\Epam.ElevatorSolution\UserInterfaceWebForms\bin\roslyn\System.Security.Claims.dll
+C:\Users\Shruthi_Nadigoti\source\repos\Epam.ElevatorSolution\UserInterfaceWebForms\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\Shruthi_Nadigoti\source\repos\Epam.ElevatorSolution\UserInterfaceWebForms\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\Shruthi_Nadigoti\source\repos\Epam.ElevatorSolution\UserInterfaceWebForms\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\Shruthi_Nadigoti\source\repos\Epam.ElevatorSolution\UserInterfaceWebForms\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\Shruthi_Nadigoti\source\repos\Epam.ElevatorSolution\UserInterfaceWebForms\bin\roslyn\System.Security.Principal.Windows.dll
+C:\Users\Shruthi_Nadigoti\source\repos\Epam.ElevatorSolution\UserInterfaceWebForms\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\Shruthi_Nadigoti\source\repos\Epam.ElevatorSolution\UserInterfaceWebForms\bin\roslyn\System.Threading.Thread.dll
+C:\Users\Shruthi_Nadigoti\source\repos\Epam.ElevatorSolution\UserInterfaceWebForms\bin\roslyn\System.ValueTuple.dll
+C:\Users\Shruthi_Nadigoti\source\repos\Epam.ElevatorSolution\UserInterfaceWebForms\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\Shruthi_Nadigoti\source\repos\Epam.ElevatorSolution\UserInterfaceWebForms\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\Shruthi_Nadigoti\source\repos\Epam.ElevatorSolution\UserInterfaceWebForms\bin\roslyn\System.Xml.XPath.dll
+C:\Users\Shruthi_Nadigoti\source\repos\Epam.ElevatorSolution\UserInterfaceWebForms\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\Shruthi_Nadigoti\source\repos\Epam.ElevatorSolution\UserInterfaceWebForms\bin\roslyn\vbc.exe
+C:\Users\Shruthi_Nadigoti\source\repos\Epam.ElevatorSolution\UserInterfaceWebForms\bin\roslyn\vbc.exe.config
+C:\Users\Shruthi_Nadigoti\source\repos\Epam.ElevatorSolution\UserInterfaceWebForms\bin\roslyn\vbc.rsp
+C:\Users\Shruthi_Nadigoti\source\repos\Epam.ElevatorSolution\UserInterfaceWebForms\bin\roslyn\VBCSCompiler.exe
+C:\Users\Shruthi_Nadigoti\source\repos\Epam.ElevatorSolution\UserInterfaceWebForms\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Shruthi_Nadigoti\source\repos\Epam.ElevatorSolution\UserInterfaceWebForms\bin\Antlr3.Runtime.dll
+C:\Users\Shruthi_Nadigoti\source\repos\Epam.ElevatorSolution\UserInterfaceWebForms\bin\AspNet.ScriptManager.bootstrap.dll
+C:\Users\Shruthi_Nadigoti\source\repos\Epam.ElevatorSolution\UserInterfaceWebForms\bin\AspNet.ScriptManager.jQuery.dll
+C:\Users\Shruthi_Nadigoti\source\repos\Epam.ElevatorSolution\UserInterfaceWebForms\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\Shruthi_Nadigoti\source\repos\Epam.ElevatorSolution\UserInterfaceWebForms\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\Shruthi_Nadigoti\source\repos\Epam.ElevatorSolution\UserInterfaceWebForms\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\Shruthi_Nadigoti\source\repos\Epam.ElevatorSolution\UserInterfaceWebForms\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\Shruthi_Nadigoti\source\repos\Epam.ElevatorSolution\UserInterfaceWebForms\bin\Microsoft.AI.Web.dll
+C:\Users\Shruthi_Nadigoti\source\repos\Epam.ElevatorSolution\UserInterfaceWebForms\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\Shruthi_Nadigoti\source\repos\Epam.ElevatorSolution\UserInterfaceWebForms\bin\Microsoft.ApplicationInsights.dll
+C:\Users\Shruthi_Nadigoti\source\repos\Epam.ElevatorSolution\UserInterfaceWebForms\bin\Microsoft.AspNet.FriendlyUrls.dll
+C:\Users\Shruthi_Nadigoti\source\repos\Epam.ElevatorSolution\UserInterfaceWebForms\bin\Microsoft.AspNet.TelemetryCorrelation.dll
+C:\Users\Shruthi_Nadigoti\source\repos\Epam.ElevatorSolution\UserInterfaceWebForms\bin\Microsoft.AspNet.Web.Optimization.WebForms.dll
+C:\Users\Shruthi_Nadigoti\source\repos\Epam.ElevatorSolution\UserInterfaceWebForms\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Shruthi_Nadigoti\source\repos\Epam.ElevatorSolution\UserInterfaceWebForms\bin\Microsoft.ScriptManager.MSAjax.dll
+C:\Users\Shruthi_Nadigoti\source\repos\Epam.ElevatorSolution\UserInterfaceWebForms\bin\Microsoft.ScriptManager.WebForms.dll
+C:\Users\Shruthi_Nadigoti\source\repos\Epam.ElevatorSolution\UserInterfaceWebForms\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Shruthi_Nadigoti\source\repos\Epam.ElevatorSolution\UserInterfaceWebForms\bin\Newtonsoft.Json.dll
+C:\Users\Shruthi_Nadigoti\source\repos\Epam.ElevatorSolution\UserInterfaceWebForms\bin\System.Diagnostics.DiagnosticSource.dll
+C:\Users\Shruthi_Nadigoti\source\repos\Epam.ElevatorSolution\UserInterfaceWebForms\bin\System.Web.Optimization.dll
+C:\Users\Shruthi_Nadigoti\source\repos\Epam.ElevatorSolution\UserInterfaceWebForms\bin\WebGrease.dll
+C:\Users\Shruthi_Nadigoti\source\repos\Epam.ElevatorSolution\UserInterfaceWebForms\bin\System.Web.Optimization.xml
+C:\Users\Shruthi_Nadigoti\source\repos\Epam.ElevatorSolution\UserInterfaceWebForms\bin\Newtonsoft.Json.xml
+C:\Users\Shruthi_Nadigoti\source\repos\Epam.ElevatorSolution\UserInterfaceWebForms\bin\Antlr3.Runtime.pdb
+C:\Users\Shruthi_Nadigoti\source\repos\Epam.ElevatorSolution\UserInterfaceWebForms\bin\Microsoft.AspNet.FriendlyUrls.xml
+C:\Users\Shruthi_Nadigoti\source\repos\Epam.ElevatorSolution\UserInterfaceWebForms\bin\System.Diagnostics.DiagnosticSource.xml
+C:\Users\Shruthi_Nadigoti\source\repos\Epam.ElevatorSolution\UserInterfaceWebForms\bin\Microsoft.AspNet.TelemetryCorrelation.xml
+C:\Users\Shruthi_Nadigoti\source\repos\Epam.ElevatorSolution\UserInterfaceWebForms\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\Shruthi_Nadigoti\source\repos\Epam.ElevatorSolution\UserInterfaceWebForms\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\Shruthi_Nadigoti\source\repos\Epam.ElevatorSolution\UserInterfaceWebForms\bin\Microsoft.AI.Web.xml
+C:\Users\Shruthi_Nadigoti\source\repos\Epam.ElevatorSolution\UserInterfaceWebForms\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Shruthi_Nadigoti\source\repos\Epam.ElevatorSolution\UserInterfaceWebForms\obj\Debug\UserInterfaceWebForms.csproj.CopyComplete
+C:\Users\Shruthi_Nadigoti\source\repos\Epam.ElevatorSolution\UserInterfaceWebForms\obj\Debug\UserInterfaceWebForms.dll
+C:\Users\Shruthi_Nadigoti\source\repos\Epam.ElevatorSolution\UserInterfaceWebForms\obj\Debug\UserInterfaceWebForms.pdb
+C:\Users\Shruthi_Nadigoti\source\repos\Epam.ElevatorSolution - Copy\UserInterfaceWebForms\bin\ApplicationInsights.config
+C:\Users\Shruthi_Nadigoti\source\repos\Epam.ElevatorSolution - Copy\UserInterfaceWebForms\bin\UserInterfaceWebForms.dll.config
+C:\Users\Shruthi_Nadigoti\source\repos\Epam.ElevatorSolution - Copy\UserInterfaceWebForms\bin\UserInterfaceWebForms.dll
+C:\Users\Shruthi_Nadigoti\source\repos\Epam.ElevatorSolution - Copy\UserInterfaceWebForms\bin\UserInterfaceWebForms.pdb
+C:\Users\Shruthi_Nadigoti\source\repos\Epam.ElevatorSolution - Copy\UserInterfaceWebForms\bin\roslyn\csc.exe
+C:\Users\Shruthi_Nadigoti\source\repos\Epam.ElevatorSolution - Copy\UserInterfaceWebForms\bin\roslyn\csc.exe.config
+C:\Users\Shruthi_Nadigoti\source\repos\Epam.ElevatorSolution - Copy\UserInterfaceWebForms\bin\roslyn\csc.rsp
+C:\Users\Shruthi_Nadigoti\source\repos\Epam.ElevatorSolution - Copy\UserInterfaceWebForms\bin\roslyn\csi.exe
+C:\Users\Shruthi_Nadigoti\source\repos\Epam.ElevatorSolution - Copy\UserInterfaceWebForms\bin\roslyn\csi.exe.config
+C:\Users\Shruthi_Nadigoti\source\repos\Epam.ElevatorSolution - Copy\UserInterfaceWebForms\bin\roslyn\csi.rsp
+C:\Users\Shruthi_Nadigoti\source\repos\Epam.ElevatorSolution - Copy\UserInterfaceWebForms\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Shruthi_Nadigoti\source\repos\Epam.ElevatorSolution - Copy\UserInterfaceWebForms\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Shruthi_Nadigoti\source\repos\Epam.ElevatorSolution - Copy\UserInterfaceWebForms\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\Shruthi_Nadigoti\source\repos\Epam.ElevatorSolution - Copy\UserInterfaceWebForms\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Shruthi_Nadigoti\source\repos\Epam.ElevatorSolution - Copy\UserInterfaceWebForms\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\Shruthi_Nadigoti\source\repos\Epam.ElevatorSolution - Copy\UserInterfaceWebForms\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Shruthi_Nadigoti\source\repos\Epam.ElevatorSolution - Copy\UserInterfaceWebForms\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Shruthi_Nadigoti\source\repos\Epam.ElevatorSolution - Copy\UserInterfaceWebForms\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\Shruthi_Nadigoti\source\repos\Epam.ElevatorSolution - Copy\UserInterfaceWebForms\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\Shruthi_Nadigoti\source\repos\Epam.ElevatorSolution - Copy\UserInterfaceWebForms\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Shruthi_Nadigoti\source\repos\Epam.ElevatorSolution - Copy\UserInterfaceWebForms\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\Users\Shruthi_Nadigoti\source\repos\Epam.ElevatorSolution - Copy\UserInterfaceWebForms\bin\roslyn\System.AppContext.dll
+C:\Users\Shruthi_Nadigoti\source\repos\Epam.ElevatorSolution - Copy\UserInterfaceWebForms\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Shruthi_Nadigoti\source\repos\Epam.ElevatorSolution - Copy\UserInterfaceWebForms\bin\roslyn\System.Console.dll
+C:\Users\Shruthi_Nadigoti\source\repos\Epam.ElevatorSolution - Copy\UserInterfaceWebForms\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\Shruthi_Nadigoti\source\repos\Epam.ElevatorSolution - Copy\UserInterfaceWebForms\bin\roslyn\System.Diagnostics.Process.dll
+C:\Users\Shruthi_Nadigoti\source\repos\Epam.ElevatorSolution - Copy\UserInterfaceWebForms\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\Shruthi_Nadigoti\source\repos\Epam.ElevatorSolution - Copy\UserInterfaceWebForms\bin\roslyn\System.IO.Compression.dll
+C:\Users\Shruthi_Nadigoti\source\repos\Epam.ElevatorSolution - Copy\UserInterfaceWebForms\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\Shruthi_Nadigoti\source\repos\Epam.ElevatorSolution - Copy\UserInterfaceWebForms\bin\roslyn\System.IO.FileSystem.DriveInfo.dll
+C:\Users\Shruthi_Nadigoti\source\repos\Epam.ElevatorSolution - Copy\UserInterfaceWebForms\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\Shruthi_Nadigoti\source\repos\Epam.ElevatorSolution - Copy\UserInterfaceWebForms\bin\roslyn\System.IO.Pipes.dll
+C:\Users\Shruthi_Nadigoti\source\repos\Epam.ElevatorSolution - Copy\UserInterfaceWebForms\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Shruthi_Nadigoti\source\repos\Epam.ElevatorSolution - Copy\UserInterfaceWebForms\bin\roslyn\System.Security.AccessControl.dll
+C:\Users\Shruthi_Nadigoti\source\repos\Epam.ElevatorSolution - Copy\UserInterfaceWebForms\bin\roslyn\System.Security.Claims.dll
+C:\Users\Shruthi_Nadigoti\source\repos\Epam.ElevatorSolution - Copy\UserInterfaceWebForms\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\Shruthi_Nadigoti\source\repos\Epam.ElevatorSolution - Copy\UserInterfaceWebForms\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\Shruthi_Nadigoti\source\repos\Epam.ElevatorSolution - Copy\UserInterfaceWebForms\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\Shruthi_Nadigoti\source\repos\Epam.ElevatorSolution - Copy\UserInterfaceWebForms\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\Shruthi_Nadigoti\source\repos\Epam.ElevatorSolution - Copy\UserInterfaceWebForms\bin\roslyn\System.Security.Principal.Windows.dll
+C:\Users\Shruthi_Nadigoti\source\repos\Epam.ElevatorSolution - Copy\UserInterfaceWebForms\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\Shruthi_Nadigoti\source\repos\Epam.ElevatorSolution - Copy\UserInterfaceWebForms\bin\roslyn\System.Threading.Thread.dll
+C:\Users\Shruthi_Nadigoti\source\repos\Epam.ElevatorSolution - Copy\UserInterfaceWebForms\bin\roslyn\System.ValueTuple.dll
+C:\Users\Shruthi_Nadigoti\source\repos\Epam.ElevatorSolution - Copy\UserInterfaceWebForms\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\Shruthi_Nadigoti\source\repos\Epam.ElevatorSolution - Copy\UserInterfaceWebForms\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\Shruthi_Nadigoti\source\repos\Epam.ElevatorSolution - Copy\UserInterfaceWebForms\bin\roslyn\System.Xml.XPath.dll
+C:\Users\Shruthi_Nadigoti\source\repos\Epam.ElevatorSolution - Copy\UserInterfaceWebForms\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\Shruthi_Nadigoti\source\repos\Epam.ElevatorSolution - Copy\UserInterfaceWebForms\bin\roslyn\vbc.exe
+C:\Users\Shruthi_Nadigoti\source\repos\Epam.ElevatorSolution - Copy\UserInterfaceWebForms\bin\roslyn\vbc.exe.config
+C:\Users\Shruthi_Nadigoti\source\repos\Epam.ElevatorSolution - Copy\UserInterfaceWebForms\bin\roslyn\vbc.rsp
+C:\Users\Shruthi_Nadigoti\source\repos\Epam.ElevatorSolution - Copy\UserInterfaceWebForms\bin\roslyn\VBCSCompiler.exe
+C:\Users\Shruthi_Nadigoti\source\repos\Epam.ElevatorSolution - Copy\UserInterfaceWebForms\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Shruthi_Nadigoti\source\repos\Epam.ElevatorSolution - Copy\UserInterfaceWebForms\bin\Antlr3.Runtime.dll
+C:\Users\Shruthi_Nadigoti\source\repos\Epam.ElevatorSolution - Copy\UserInterfaceWebForms\bin\AspNet.ScriptManager.bootstrap.dll
+C:\Users\Shruthi_Nadigoti\source\repos\Epam.ElevatorSolution - Copy\UserInterfaceWebForms\bin\AspNet.ScriptManager.jQuery.dll
+C:\Users\Shruthi_Nadigoti\source\repos\Epam.ElevatorSolution - Copy\UserInterfaceWebForms\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\Shruthi_Nadigoti\source\repos\Epam.ElevatorSolution - Copy\UserInterfaceWebForms\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\Shruthi_Nadigoti\source\repos\Epam.ElevatorSolution - Copy\UserInterfaceWebForms\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\Shruthi_Nadigoti\source\repos\Epam.ElevatorSolution - Copy\UserInterfaceWebForms\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\Shruthi_Nadigoti\source\repos\Epam.ElevatorSolution - Copy\UserInterfaceWebForms\bin\Microsoft.AI.Web.dll
+C:\Users\Shruthi_Nadigoti\source\repos\Epam.ElevatorSolution - Copy\UserInterfaceWebForms\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\Shruthi_Nadigoti\source\repos\Epam.ElevatorSolution - Copy\UserInterfaceWebForms\bin\Microsoft.ApplicationInsights.dll
+C:\Users\Shruthi_Nadigoti\source\repos\Epam.ElevatorSolution - Copy\UserInterfaceWebForms\bin\Microsoft.AspNet.FriendlyUrls.dll
+C:\Users\Shruthi_Nadigoti\source\repos\Epam.ElevatorSolution - Copy\UserInterfaceWebForms\bin\Microsoft.AspNet.TelemetryCorrelation.dll
+C:\Users\Shruthi_Nadigoti\source\repos\Epam.ElevatorSolution - Copy\UserInterfaceWebForms\bin\Microsoft.AspNet.Web.Optimization.WebForms.dll
+C:\Users\Shruthi_Nadigoti\source\repos\Epam.ElevatorSolution - Copy\UserInterfaceWebForms\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Shruthi_Nadigoti\source\repos\Epam.ElevatorSolution - Copy\UserInterfaceWebForms\bin\Microsoft.ScriptManager.MSAjax.dll
+C:\Users\Shruthi_Nadigoti\source\repos\Epam.ElevatorSolution - Copy\UserInterfaceWebForms\bin\Microsoft.ScriptManager.WebForms.dll
+C:\Users\Shruthi_Nadigoti\source\repos\Epam.ElevatorSolution - Copy\UserInterfaceWebForms\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Shruthi_Nadigoti\source\repos\Epam.ElevatorSolution - Copy\UserInterfaceWebForms\bin\Newtonsoft.Json.dll
+C:\Users\Shruthi_Nadigoti\source\repos\Epam.ElevatorSolution - Copy\UserInterfaceWebForms\bin\System.Diagnostics.DiagnosticSource.dll
+C:\Users\Shruthi_Nadigoti\source\repos\Epam.ElevatorSolution - Copy\UserInterfaceWebForms\bin\System.Web.Optimization.dll
+C:\Users\Shruthi_Nadigoti\source\repos\Epam.ElevatorSolution - Copy\UserInterfaceWebForms\bin\WebGrease.dll
+C:\Users\Shruthi_Nadigoti\source\repos\Epam.ElevatorSolution - Copy\UserInterfaceWebForms\bin\System.Web.Optimization.xml
+C:\Users\Shruthi_Nadigoti\source\repos\Epam.ElevatorSolution - Copy\UserInterfaceWebForms\bin\Newtonsoft.Json.xml
+C:\Users\Shruthi_Nadigoti\source\repos\Epam.ElevatorSolution - Copy\UserInterfaceWebForms\bin\Antlr3.Runtime.pdb
+C:\Users\Shruthi_Nadigoti\source\repos\Epam.ElevatorSolution - Copy\UserInterfaceWebForms\bin\Microsoft.AspNet.FriendlyUrls.xml
+C:\Users\Shruthi_Nadigoti\source\repos\Epam.ElevatorSolution - Copy\UserInterfaceWebForms\bin\System.Diagnostics.DiagnosticSource.xml
+C:\Users\Shruthi_Nadigoti\source\repos\Epam.ElevatorSolution - Copy\UserInterfaceWebForms\bin\Microsoft.AspNet.TelemetryCorrelation.xml
+C:\Users\Shruthi_Nadigoti\source\repos\Epam.ElevatorSolution - Copy\UserInterfaceWebForms\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\Shruthi_Nadigoti\source\repos\Epam.ElevatorSolution - Copy\UserInterfaceWebForms\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\Shruthi_Nadigoti\source\repos\Epam.ElevatorSolution - Copy\UserInterfaceWebForms\bin\Microsoft.AI.Web.xml
+C:\Users\Shruthi_Nadigoti\source\repos\Epam.ElevatorSolution - Copy\UserInterfaceWebForms\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Shruthi_Nadigoti\source\repos\Epam.ElevatorSolution - Copy\UserInterfaceWebForms\obj\Debug\UserInterfaceWebForms.csprojAssemblyReference.cache
+C:\Users\Shruthi_Nadigoti\source\repos\Epam.ElevatorSolution - Copy\UserInterfaceWebForms\obj\Debug\UserInterfaceWebForms.csproj.CoreCompileInputs.cache
+C:\Users\Shruthi_Nadigoti\source\repos\Epam.ElevatorSolution - Copy\UserInterfaceWebForms\obj\Debug\UserInterfaceWebForms.csproj.CopyComplete
+C:\Users\Shruthi_Nadigoti\source\repos\Epam.ElevatorSolution - Copy\UserInterfaceWebForms\obj\Debug\UserInterfaceWebForms.dll
+C:\Users\Shruthi_Nadigoti\source\repos\Epam.ElevatorSolution - Copy\UserInterfaceWebForms\obj\Debug\UserInterfaceWebForms.pdb
