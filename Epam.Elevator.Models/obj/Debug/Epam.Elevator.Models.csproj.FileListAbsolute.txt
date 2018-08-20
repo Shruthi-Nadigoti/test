@@ -22,3 +22,9 @@ C:\Users\Shruthi_Nadigoti\source\repos\ElevatorProject\test\Epam.Elevator.Models
 C:\Users\Shruthi_Nadigoti\source\repos\ElevatorProject\test\Epam.Elevator.Models\obj\Debug\Epam.Elevator.Models.csproj.CoreCompileInputs.cache
 C:\Users\Shruthi_Nadigoti\source\repos\ElevatorProject\test\Epam.Elevator.Models\obj\Debug\Epam.Elevator.Models.dll
 C:\Users\Shruthi_Nadigoti\source\repos\ElevatorProject\test\Epam.Elevator.Models\obj\Debug\Epam.Elevator.Models.pdb
+C:\Users\SURATHI\Videos\Elevator\test\Epam.Elevator.Models\bin\Debug\Epam.Elevator.Models.dll
+C:\Users\SURATHI\Videos\Elevator\test\Epam.Elevator.Models\bin\Debug\Epam.Elevator.Models.pdb
+C:\Users\SURATHI\Videos\Elevator\test\Epam.Elevator.Models\obj\Debug\Epam.Elevator.Models.csprojAssemblyReference.cache
+C:\Users\SURATHI\Videos\Elevator\test\Epam.Elevator.Models\obj\Debug\Epam.Elevator.Models.csproj.CoreCompileInputs.cache
+C:\Users\SURATHI\Videos\Elevator\test\Epam.Elevator.Models\obj\Debug\Epam.Elevator.Models.dll
+C:\Users\SURATHI\Videos\Elevator\test\Epam.Elevator.Models\obj\Debug\Epam.Elevator.Models.pdb
