@@ -15,32 +15,19 @@ namespace Epam.Elevator.Presentation.Controllers
         // GET: User
         public ActionResult Index()
         {
-            return View();
-        }
-
-        // GET: User/Details/5
-        public ActionResult Details()
-        {
-            //List<User> x = new List<User>() {
-            //new User{ FirstName="shruthi",LastName="Nadigoti",UserId=1},
-            //new User{ FirstName="shravya",LastName="Nadigoti",UserId=2},
-            //new User{ FirstName="shr",LastName="Nadigoti",UserId=3}};
             UserBusiness userBusiness = new UserBusiness(new UserDataAccess());
             List<User> userList = userBusiness.GetUsers();
             return View(userList);
         }
-        public ActionResult Get(int id)
+
+        // GET: User/Details/5
+        public ActionResult Details(int id)
         {
-            try
-            {
-                
-                return View();
-            }
-            catch
-            {
-                return View();
-            }
+            UserBusiness userBusiness = new UserBusiness(new UserDataAccess());
+            User user = userBusiness.Get(id);
+            return View(user);
         }
+       
         // GET: User/Create
         public ActionResult Create()
         {
@@ -58,10 +45,13 @@ namespace Epam.Elevator.Presentation.Controllers
                 user.CreatedByUserId = 1;// (int)Session["UserId"];
                 user.ModifiedByUserId = 2;// (int)Session["UserId"];
                 user.Address = formCollection["Address"];
-                user.EmaidId = formCollection["EmailId"];
+                user.EmailId = formCollection["EmailId"];
                 user.FirstName = formCollection["FirstName"];
                 user.LastName = formCollection["LastName"];
-                user.Gender = (Enums.Gender)Enum.Parse(typeof(Enums.Gender), formCollection["StudentGender"]);
+                user.CreatedDate = DateTime.Now;
+                user.ModifiedDate = DateTime.Now;
+                user.DateOfBirth = DateTime.Now;
+                user.Gender = (Enums.Gender)Enum.Parse(typeof(Enums.Gender), formCollection["Gender"]);
                 user.Password = formCollection["Password"];
 
                // string iString = "2005-05-05 22:12 PM";
@@ -78,30 +68,48 @@ namespace Epam.Elevator.Presentation.Controllers
         // GET: User/Edit/5
         public ActionResult Edit(int id)
         {
-            
-            return View(new User { FirstName = "shruthi", LastName = "Nadigoti", UserId = 1 });
+            UserBusiness userBusiness = new UserBusiness(new UserDataAccess());
+            User user = userBusiness.Get(id);
+            return View(user);
         }
 
         // POST: User/Edit/5
         [HttpPost]
-        public ActionResult Edit(int id, FormCollection collection)
+        public ActionResult Edit(int id, FormCollection formCollection)
         {
-            try
-            {
+            //try
+            //{
                 // TODO: Add update logic here
-               
+                UserBusiness userBusiness = new UserBusiness(new UserDataAccess());
+                User user = new User();
+                user.CreatedByUserId = 1;// (int)Session["UserId"];
+                user.ModifiedByUserId = 2;// (int)Session["UserId"];
+                user.Address = formCollection["Address"];
+                user.EmailId = formCollection["EmailId"];
+                user.FirstName = formCollection["FirstName"];
+                user.LastName = formCollection["LastName"];
+                user.Password = formCollection["Password"];
+                user.UserId = id;
+                user.CreatedDate = DateTime.Now;
+                user.ModifiedDate = DateTime.Now;
+                user.DateOfBirth = DateTime.Now;
+                user.Gender = (Enums.Gender)Enum.Parse(typeof(Enums.Gender), formCollection["Gender"]);
+                userBusiness.Update(user);
                 return RedirectToAction("Index");
-            }
-            catch
-            {
-                return View();
-            }
+            //}
+            //catch
+            //{
+            //    return View();
+            //}
         }
 
         // GET: User/Delete/5
         public ActionResult Delete(int id)
         {
-            return View();
+
+            UserBusiness userBusiness = new UserBusiness(new UserDataAccess());
+            User user = userBusiness.Get(id);
+            return View(user);
         }
 
         // POST: User/Delete/5
@@ -111,7 +119,8 @@ namespace Epam.Elevator.Presentation.Controllers
             try
             {
                 // TODO: Add delete logic here
-
+                UserBusiness userBusiness = new UserBusiness(new UserDataAccess());
+                bool result = userBusiness.Delete(id);
                 return RedirectToAction("Index");
             }
             catch

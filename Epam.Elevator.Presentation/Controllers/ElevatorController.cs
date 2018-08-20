@@ -16,8 +16,8 @@ namespace Epam.Elevator.Presentation.Controllers
             return View();
         }
 
-        // GET: Elevator/Details/5
-        public ActionResult Details(int id)
+        // GET: Elevator/Details
+        public ActionResult Details()
         {
             ElevatorBusiness elevatorBusiness = new ElevatorBusiness(new ElevatorDataAccess());
             List<ElevatorModel.Elevator> elevatorList = elevatorBusiness.GetElevators();

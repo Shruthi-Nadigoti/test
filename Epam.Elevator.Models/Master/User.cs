@@ -28,7 +28,7 @@ namespace Epam.Elevator.Models.Master
         [Required]
         [StringLength(50, ErrorMessage = "Max 50 characters")]
         [RegularExpression("^[a-zA-Z0-9_\\.-]+@([a-zA-Z0-9-]+\\.)+[a-zA-Z]{2,6}$")]
-        public String EmaidId { get; set; }
+        public String EmailId { get; set; }
         [Required]
         public String Address { get; set; }
         public Int32 CreatedByUserId { get; set; }

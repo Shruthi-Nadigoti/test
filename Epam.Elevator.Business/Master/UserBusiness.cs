@@ -23,17 +23,17 @@ namespace Epam.Elevator.Business.Master
             bool result = userDataAccess.Update(user);
             return result;
         }
+        public User Get(int userId)
+        {
+
+            User user = userDataAccess.Get(userId);
+            return user;
+        }
         public bool Delete(int userId)
         {
 
             bool result = userDataAccess.Delete(userId);
             return result;
-        }
-        public  User Get(int userId)
-        {
-
-            User user = userDataAccess.Get(userId);
-            return user;
         }
         public List<User> GetUsers()
         {

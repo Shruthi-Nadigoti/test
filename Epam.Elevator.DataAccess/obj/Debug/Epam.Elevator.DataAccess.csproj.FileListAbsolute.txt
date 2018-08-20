@@ -25,3 +25,12 @@ C:\Users\SURATHI\Videos\EPAM_Assignments\DOT-NET\Elevator-master-4e741c6aa5c5cc1
 C:\Users\SURATHI\Videos\EPAM_Assignments\DOT-NET\Elevator-master-4e741c6aa5c5cc1f2d84a991b7f9780321a00125\Epam.Elevator.DataAccess\bin\Debug\Epam.Elevator.Models.dll
 C:\Users\SURATHI\Videos\EPAM_Assignments\DOT-NET\Elevator-master-4e741c6aa5c5cc1f2d84a991b7f9780321a00125\Epam.Elevator.DataAccess\bin\Debug\Epam.Elevator.Models.pdb
 C:\Users\SURATHI\Videos\EPAM_Assignments\DOT-NET\Elevator-master-4e741c6aa5c5cc1f2d84a991b7f9780321a00125\Epam.Elevator.DataAccess\obj\Debug\Epam.Elevator.DataAccess.csproj.CopyComplete
+C:\Users\Shruthi_Nadigoti\source\repos\ElevatorProject\test\Epam.Elevator.DataAccess\bin\Debug\Epam.Elevator.DataAccess.dll
+C:\Users\Shruthi_Nadigoti\source\repos\ElevatorProject\test\Epam.Elevator.DataAccess\bin\Debug\Epam.Elevator.DataAccess.pdb
+C:\Users\Shruthi_Nadigoti\source\repos\ElevatorProject\test\Epam.Elevator.DataAccess\bin\Debug\Epam.Elevator.Models.dll
+C:\Users\Shruthi_Nadigoti\source\repos\ElevatorProject\test\Epam.Elevator.DataAccess\bin\Debug\Epam.Elevator.Models.pdb
+C:\Users\Shruthi_Nadigoti\source\repos\ElevatorProject\test\Epam.Elevator.DataAccess\obj\Debug\Epam.Elevator.DataAccess.csprojAssemblyReference.cache
+C:\Users\Shruthi_Nadigoti\source\repos\ElevatorProject\test\Epam.Elevator.DataAccess\obj\Debug\Epam.Elevator.DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\Shruthi_Nadigoti\source\repos\ElevatorProject\test\Epam.Elevator.DataAccess\obj\Debug\Epam.Elevator.DataAccess.csproj.CopyComplete
+C:\Users\Shruthi_Nadigoti\source\repos\ElevatorProject\test\Epam.Elevator.DataAccess\obj\Debug\Epam.Elevator.DataAccess.dll
+C:\Users\Shruthi_Nadigoti\source\repos\ElevatorProject\test\Epam.Elevator.DataAccess\obj\Debug\Epam.Elevator.DataAccess.pdb

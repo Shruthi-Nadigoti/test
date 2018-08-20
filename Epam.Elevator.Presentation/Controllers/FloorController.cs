@@ -17,8 +17,8 @@ namespace Epam.Elevator.Presentation.Controllers
             return View();
         }
 
-        // GET: Floor/Details/5
-        public ActionResult Details(int id)
+        // GET: Floor/Details
+        public ActionResult Details()
         {
             FloorBusiness FloorBusiness = new FloorBusiness(new FloorDataAccess());
             List<Floor> floorList = FloorBusiness.GetFloors();

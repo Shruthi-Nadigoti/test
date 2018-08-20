@@ -14,5 +14,6 @@ namespace Epam.Elevator.DataAccess.Master.Interfaces
         bool Delete(int userId);
         User Get(int userId);
         List<User> GetUsers();
+
     }
 }
