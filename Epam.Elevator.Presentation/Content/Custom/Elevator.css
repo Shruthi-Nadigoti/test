@@ -1,0 +1,32 @@
+﻿body {
+}
+.lifts {
+    height: 300px; /*200px; 500 170px;900*/
+    width: 200px;
+    margin: 10px;
+    border-style: solid;
+    border-width: thick;
+    border-color: black;
+    background-color: gray;
+    color: white;
+}
+
+.floatleft {
+    float: left;
+}
+
+.keypad {
+    height: 50px;
+    width: 50px;
+    border-width: thin;
+    border-color: black;
+    background-color: coral;
+    color: white;
+}
+
+.output {
+    color: chocolate;
+    margin-top: 300px;
+    margin-left: 50px;
+    font-size: large;
+}

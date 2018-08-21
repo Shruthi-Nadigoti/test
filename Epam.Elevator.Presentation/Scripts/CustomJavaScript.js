@@ -1,5 +1,5 @@
-﻿var rows = prompt("How many rows for your multiplication table?");
-var cols = prompt("How many columns for your multiplication table?");
+﻿var rows = 5
+var cols = 5
 
 
 
@@ -12,6 +12,8 @@ if (cols == "" || cols == null)
 createTable(rows, cols);
 function createTable(rows, cols) {
     var j = 1;
+    ////helloo
+    var k = 10;
     var outputkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk = "<table border='1' width='500' cellspacing='0'cellpadding='5'>";
     for (i = 1; i <= rows; i++) {
         outputkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk = outputkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk + "<tr>";

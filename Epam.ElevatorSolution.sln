@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Epam.Elevator.Models", "Epa
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Epam.Elevator.Presentation", "Epam.Elevator.Presentation\Epam.Elevator.Presentation.csproj", "{577F0E58-B052-4B1D-BB10-90F47533AAB1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Epam.Elevator.BusinessTest", "UnitTestBusiness\Epam.Elevator.BusinessTest.csproj", "{87DC60EF-F953-4E89-9555-47BADE444997}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{577F0E58-B052-4B1D-BB10-90F47533AAB1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{577F0E58-B052-4B1D-BB10-90F47533AAB1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{577F0E58-B052-4B1D-BB10-90F47533AAB1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{87DC60EF-F953-4E89-9555-47BADE444997}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{87DC60EF-F953-4E89-9555-47BADE444997}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{87DC60EF-F953-4E89-9555-47BADE444997}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{87DC60EF-F953-4E89-9555-47BADE444997}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

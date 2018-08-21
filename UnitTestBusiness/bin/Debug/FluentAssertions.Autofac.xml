@@ -1,0 +1,614 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>FluentAssertions.Autofac</name>
+    </assembly>
+    <members>
+        <member name="T:FluentAssertions.Autofac.AutofacAssertionExtensions">
+            <summary>
+                Contains extension methods for Autofac assertions.
+            </summary>
+        </member>
+        <member name="M:FluentAssertions.Autofac.AutofacAssertionExtensions.Should(Autofac.IContainer)">
+            <summary>
+                Returns an <see cref="T:FluentAssertions.Autofac.ContainerAssertions"/> object that can be used to assert the current <see cref="T:Autofac.IContainer"/>.
+            </summary>
+        </member>
+        <member name="M:FluentAssertions.Autofac.AutofacAssertionExtensions.Should(FluentAssertions.Autofac.MockContainerBuilder)">
+            <summary>
+                Returns an <see cref="T:FluentAssertions.Autofac.MockContainerBuilderAssertions"/> object that can be used to assert the current <see cref="T:FluentAssertions.Autofac.MockContainerBuilder"/>.
+            </summary>
+        </member>
+        <member name="T:FluentAssertions.Autofac.ContainerAssertions">
+            <inheritdoc />
+            <summary>
+                Contains a number of methods to assert that an <see cref="T:Autofac.IContainer" /> is in the expected state.
+            </summary>
+        </member>
+        <member name="P:FluentAssertions.Autofac.ContainerAssertions.Identifier">
+            <inheritdoc />
+            <summary>
+                Returns the type of the subject the assertion applies on.
+            </summary>
+        </member>
+        <member name="M:FluentAssertions.Autofac.ContainerAssertions.#ctor(Autofac.IContainer)">
+            <summary>
+                Initializes a new instance of the <see cref="T:FluentAssertions.Autofac.ContainerAssertions" /> class.
+            </summary>
+            <param name="container">The subject</param>
+        </member>
+        <member name="M:FluentAssertions.Autofac.ContainerAssertions.Have">
+            <summary>
+                Returns an <see cref="T:FluentAssertions.Autofac.ContainerRegistrationAssertions"/> object that can be used to assert the current <see cref="T:Autofac.IContainer"/>.
+            </summary>
+        </member>
+        <member name="M:FluentAssertions.Autofac.ContainerAssertions.Resolve(System.Type)">
+            <summary>
+                Returns an <see cref="T:FluentAssertions.Autofac.ResolveAssertions"/> object that can be used to assert the current <see paramref="serviceType"/>.
+            </summary>
+        </member>
+        <member name="M:FluentAssertions.Autofac.ContainerAssertions.Resolve``1">
+            <summary>
+                Returns an <see cref="T:FluentAssertions.Autofac.ResolveAssertions"/> object that can be used to assert the current <see typeparamref="TService"/>.
+            </summary>
+        </member>
+        <member name="M:FluentAssertions.Autofac.ContainerAssertions.AutoActivate(System.Type)">
+            <summary>
+              Asserts the specified type has been registered with auto activation on the current <see cref="T:Autofac.IContainer"/>.
+            </summary>
+        </member>
+        <member name="M:FluentAssertions.Autofac.ContainerAssertions.AutoActivate``1">
+            <summary>
+              Asserts the specified type has been registered with auto activation on the current <see cref="T:Autofac.IContainer"/>.
+            </summary>
+        </member>
+        <member name="M:FluentAssertions.Autofac.ContainerAssertions.RegisterAssemblyTypes(System.Reflection.Assembly[])">
+            <summary>
+                Returns an <see cref="T:FluentAssertions.Autofac.TypeScanningAssertions"/> object that can be used to assert registered types on the current <see cref="T:FluentAssertions.Autofac.MockContainerBuilder"/>.
+            </summary>
+            <param name="assemblies"></param>
+        </member>
+        <member name="M:FluentAssertions.Autofac.ContainerAssertions.RegisterTypes(System.Collections.Generic.IEnumerable{System.Type})">
+            <summary>
+                Returns an <see cref="T:FluentAssertions.Autofac.TypeScanningAssertions"/> object that can be used to assert registered types on the current <see cref="T:FluentAssertions.Autofac.MockContainerBuilder"/>.
+            </summary>
+            <param name="types"></param>
+        </member>
+        <member name="T:FluentAssertions.Autofac.ContainerRegistrationAssertions">
+            <inheritdoc />
+            <summary>
+                Contains a number of methods to assert that an <see cref="T:Autofac.IContainer" /> has registered expected services.
+            </summary>
+        </member>
+        <member name="P:FluentAssertions.Autofac.ContainerRegistrationAssertions.Identifier">
+            <inheritdoc />
+            <summary>
+                Returns the type of the subject the assertion applies on.
+            </summary>
+        </member>
+        <member name="M:FluentAssertions.Autofac.ContainerRegistrationAssertions.#ctor(Autofac.IContainer)">
+            <summary>
+                Initializes a new instance of the <see cref="T:FluentAssertions.Autofac.ContainerRegistrationAssertions" /> class.
+            </summary>
+            <param name="subject">The subject</param>
+        </member>
+        <member name="M:FluentAssertions.Autofac.ContainerRegistrationAssertions.Registered``1">
+            <summary>
+                Returns an <see cref="T:FluentAssertions.Autofac.RegisterAssertions"/> object that can be used to assert the current <see cref="T:Autofac.IContainer"/> and <see typeparamref="TService"/>.
+            </summary>
+        </member>
+        <member name="M:FluentAssertions.Autofac.ContainerRegistrationAssertions.Registered(System.Type)">
+            <summary>
+                Returns an <see cref="T:FluentAssertions.Autofac.RegisterAssertions"/> object that can be used to assert the current <see cref="T:Autofac.IContainer"/> and the specified type.
+            </summary>
+        </member>
+        <member name="M:FluentAssertions.Autofac.ContainerRegistrationAssertions.Registered(System.Object)">
+            <summary>
+                Returns an <see cref="T:FluentAssertions.Autofac.RegisterAssertions"/> object that can be used to assert the current <see cref="T:Autofac.IContainer"/> and the specified instance.
+            </summary>
+        </member>
+        <member name="M:FluentAssertions.Autofac.ContainerRegistrationAssertions.NotRegistered``1">
+            <summary>
+                Asserts that the specified <see typeparamref="TService" /> has not been registered on the current <see cref="T:Autofac.IContainer"/>.
+            </summary>
+            <typeparam name="TService">The service type</typeparam>
+        </member>
+        <member name="M:FluentAssertions.Autofac.ContainerRegistrationAssertions.NotRegistered(System.Type)">
+            <summary>
+                Asserts that the specified service type has not been registered on the current <see cref="T:Autofac.IContainer"/>.
+            </summary>
+            <param name="type">The service type</param>
+        </member>
+        <member name="M:FluentAssertions.Autofac.ContainerRegistrationAssertions.NotRegistered``1(System.String)">
+            <summary>
+                Asserts that the specified <see typeparamref="TService" /> has not been registered on the current <see cref="T:Autofac.IContainer"/> with the specified name.
+            </summary>
+            <param name="serviceName">The service name</param>
+            <typeparam name="TService">The service type</typeparam>
+        </member>
+        <member name="M:FluentAssertions.Autofac.ContainerRegistrationAssertions.NotRegistered(System.String,System.Type)">
+            <summary>
+                Asserts that the specified service type has not been registered on the current <see cref="T:Autofac.IContainer"/> with the specified name.
+            </summary>
+            <param name="serviceName">The service name</param>
+            <param name="type">The service type</param>
+        </member>
+        <member name="M:FluentAssertions.Autofac.ContainerRegistrationAssertions.NotRegistered``1(System.Object)">
+            <summary>
+                Asserts that the specified service type has not been registered on the current <see cref="T:Autofac.IContainer"/> with the specified key.
+            </summary>
+            <param name="serviceKey">The service key</param>
+            <typeparam name="TService">The service type</typeparam>
+        </member>
+        <member name="M:FluentAssertions.Autofac.ContainerRegistrationAssertions.NotRegistered(System.Object,System.Type)">
+            <summary>
+                Asserts that the specified service type has not been registered on the current <see cref="T:Autofac.IContainer"/> with the specified key.
+            </summary>
+            <param name="serviceKey">The service key</param>
+            <param name="type">The service type</param>
+        </member>
+        <member name="M:FluentAssertions.Autofac.ContainerRegistrationAssertions.RegisteredGeneric(System.Type)">
+            <summary>
+                Returns an <see cref="T:FluentAssertions.Autofac.RegisterGenericSourceAssertions"/> object that can be used to assert the current <see cref="T:Autofac.IContainer"/> and the specified generic type.
+            </summary>
+        </member>
+        <member name="T:FluentAssertions.Autofac.MockContainerBuilder">
+            <summary>
+              A testable <see cref="T:Autofac.ContainerBuilder"/> that exposes the callbacks registered on the builder.
+            </summary>
+        </member>
+        <member name="M:FluentAssertions.Autofac.MockContainerBuilder.RegisterCallback(System.Action{Autofac.Core.IComponentRegistry})">
+            <summary>
+            Register a callback that will be invoked when the container is configured.
+            </summary>
+            <remarks>
+            This is primarily for extending the builder syntax.
+            </remarks>
+            <param name="configurationCallback">Callback to execute.</param>
+        </member>
+        <member name="P:FluentAssertions.Autofac.MockContainerBuilder.Callbacks">
+            <summary>
+              The callbacks that have been registered on the builder.
+            </summary>
+        </member>
+        <member name="M:FluentAssertions.Autofac.MockContainerBuilder.GetModules">
+            <summary>
+            Returns the modules registered to this <see cref="T:FluentAssertions.Autofac.MockContainerBuilder"/>.
+            </summary>
+        </member>
+        <member name="M:FluentAssertions.Autofac.MockContainerBuilder.Load(Autofac.Module)">
+            <summary>
+            Executes the Load-method of the specified <see cref="T:Autofac.Module"/> on this <see cref="T:FluentAssertions.Autofac.MockContainerBuilder"/>.
+            </summary>
+            <param name="module">The module to load</param>
+        </member>
+        <member name="T:FluentAssertions.Autofac.MockContainerBuilderAssertions">
+            <inheritdoc />
+            <summary>
+                Contains a number of methods to assert that an <see cref="T:FluentAssertions.Autofac.MockContainerBuilder" /> is in the expected state.
+            </summary>
+        </member>
+        <member name="P:FluentAssertions.Autofac.MockContainerBuilderAssertions.Identifier">
+            <inheritdoc />
+            <summary>
+                Returns the type of the subject the assertion applies on.
+            </summary>
+        </member>
+        <member name="M:FluentAssertions.Autofac.MockContainerBuilderAssertions.#ctor(FluentAssertions.Autofac.MockContainerBuilder)">
+            <summary>
+               Initializes a new instance of the <see cref="T:FluentAssertions.Autofac.MockContainerBuilderAssertions" /> class.
+            </summary>
+            <param name="subject"></param>
+            <exception cref="T:System.ArgumentNullException"></exception>
+        </member>
+        <member name="M:FluentAssertions.Autofac.MockContainerBuilderAssertions.RegisterModule``1">
+            <summary>
+               Asserts that the specified module type has been registered on the current <see cref="T:FluentAssertions.Autofac.MockContainerBuilder"/>.
+            </summary>
+            <typeparam name="TModule">The module type</typeparam>
+        </member>
+        <member name="M:FluentAssertions.Autofac.MockContainerBuilderAssertions.RegisterModule(System.Type)">
+            <summary>
+               Asserts that the specified module type has been registered on the current <see cref="T:FluentAssertions.Autofac.MockContainerBuilder"/>.
+            </summary>
+            <param name="moduleType">The module type</param>
+        </member>
+        <member name="M:FluentAssertions.Autofac.MockContainerBuilderAssertions.RegisterModulesIn(System.Reflection.Assembly)">
+            <summary>
+               Asserts that the modules contained in the specified assembly have been registered on the current <see cref="T:FluentAssertions.Autofac.MockContainerBuilder"/>.
+            </summary>
+            <param name="assembly">The module assembly</param>
+        </member>
+        <member name="T:FluentAssertions.Autofac.Module`1">
+            <summary>
+                Contains extension methods for Module assertions.
+            </summary>
+            <typeparam name="TModule"></typeparam>
+        </member>
+        <member name="M:FluentAssertions.Autofac.Module`1.GetTestContainer(System.Action{Autofac.ContainerBuilder})">
+            <summary>
+               Returns a test <see cref="T:Autofac.IContainer"/> that can be used to assert the specified <see typeparamref="TModule"/>.
+            </summary>
+            <param name="arrange">optional builder arrangement for the module</param>
+        </member>
+        <member name="M:FluentAssertions.Autofac.Module`1.GetTestContainer(System.Action{Autofac.ContainerBuilder,`0})">
+            <summary>
+               Returns a test <see cref="T:Autofac.IContainer"/> that can be used to assert the specified <see typeparamref="TModule"/>.
+            </summary>
+            <param name="arrange">optional builder arrangement for the module</param>
+        </member>
+        <member name="M:FluentAssertions.Autofac.Module`1.GetTestBuilder(System.Action{Autofac.ContainerBuilder})">
+            <summary>
+               Returns a test <see cref="T:FluentAssertions.Autofac.MockContainerBuilder"/> that can be used to assert the specified <see typeparamref="TModule"/>.
+            </summary>
+            <param name="arrange">optional builder arrangement for the module</param>
+        </member>
+        <member name="M:FluentAssertions.Autofac.Module`1.GetTestBuilder(System.Action{Autofac.ContainerBuilder,`0})">
+            <summary>
+               Returns a test <see cref="T:FluentAssertions.Autofac.MockContainerBuilder"/> that can be used to assert the specified <see typeparamref="TModule"/>.
+            </summary>
+            <param name="arrange">optional builder arrangement for the module</param>
+        </member>
+        <member name="T:FluentAssertions.Autofac.RegisterGenericSourceAssertions">
+            <inheritdoc />
+            <summary>
+                Contains a number of methods to assert that an <see cref="T:Autofac.IContainer" /> is in the expected state.
+            </summary>
+        </member>
+        <member name="P:FluentAssertions.Autofac.RegisterGenericSourceAssertions.Identifier">
+            <inheritdoc />
+            <summary>
+                Returns the type of the subject the assertion applies on.
+            </summary>
+        </member>
+        <member name="M:FluentAssertions.Autofac.RegisterGenericSourceAssertions.#ctor(Autofac.IContainer,System.Type)">
+            <summary>
+                Initializes a new instance of the <see cref="T:FluentAssertions.Autofac.RegisterGenericSourceAssertions" /> class.
+            </summary>
+            <param name="subject">The container</param>
+            <param name="genericComponentTypeDefinition">The type that should be registered on the container</param>
+        </member>
+        <member name="M:FluentAssertions.Autofac.RegisterGenericSourceAssertions.As(System.Type)">
+            <summary>
+              Asserts that the specified service type can be resolved from the current <see cref="T:Autofac.IContainer"/>.
+            </summary>
+            <param name="genericServiceTypeDefinition">The type to resolve</param>
+        </member>
+        <member name="T:FluentAssertions.Autofac.RegisterAssertions">
+            <summary>
+                Contains a number of methods to assert that an <see cref="T:Autofac.IContainer" /> is in the expected state.
+            </summary>
+        </member>
+        <member name="M:FluentAssertions.Autofac.RegisterAssertions.#ctor(Autofac.IContainer,System.Type)">
+            <summary>
+                Initializes a new instance of the <see cref="T:FluentAssertions.Autofac.RegisterAssertions" /> class.
+            </summary>
+            <param name="subject">The container</param>
+            <param name="type">The type that should be registered on the container</param>
+        </member>
+        <member name="M:FluentAssertions.Autofac.RegisterAssertions.As``1">
+            <summary>
+              Asserts that the specified implementation type can be resolved from the current <see cref="T:Autofac.IContainer"/>.
+            </summary>
+            <typeparam name="TResolve">The type to resolve</typeparam>
+        </member>
+        <member name="M:FluentAssertions.Autofac.RegisterAssertions.As(System.Type,System.Type[])">
+            <summary>
+              Asserts that the specified implementation type can be resolved from the current <see cref="T:Autofac.IContainer"/>.
+            </summary>
+            <param name="type">The type to resolve</param>
+            <param name="types">Optional types to resolve</param>
+        </member>
+        <member name="M:FluentAssertions.Autofac.RegisterAssertions.AsSelf">
+            <summary>
+              Asserts that the registered service type can be resolved from the current <see cref="T:Autofac.IContainer"/>.
+            </summary>
+        </member>
+        <member name="M:FluentAssertions.Autofac.RegisterAssertions.AsImplementedInterfaces">
+            <summary>
+              Asserts that all implemented interfaces of the registered service type can be resolved from the current <see cref="T:Autofac.IContainer"/>.
+            </summary>
+        </member>
+        <member name="T:FluentAssertions.Autofac.RegistrationAssertions">
+            <inheritdoc />
+            <summary>
+                Contains a number of methods to assert that an <see cref="T:Autofac.IContainer" /> registers value services.
+            </summary>
+        </member>
+        <member name="F:FluentAssertions.Autofac.RegistrationAssertions.Type">
+            <summary>
+               The type that should be registered on the container
+            </summary>
+        </member>
+        <member name="P:FluentAssertions.Autofac.RegistrationAssertions.Identifier">
+            <inheritdoc />
+            <summary>
+                Returns the type of the subject the assertion applies on.
+            </summary>
+        </member>
+        <member name="M:FluentAssertions.Autofac.RegistrationAssertions.#ctor(Autofac.IContainer,System.Type)">
+            <summary>
+                Initializes a new instance of the <see cref="T:FluentAssertions.Autofac.RegistrationAssertions" /> class.
+            </summary>
+            <param name="subject">The container</param>
+            <param name="type">The type that should be registered on the container</param>
+        </member>
+        <member name="M:FluentAssertions.Autofac.RegistrationAssertions.#ctor(Autofac.IContainer,Autofac.Core.IComponentRegistration)">
+            <summary>
+                Initializes a new instance of the <see cref="T:FluentAssertions.Autofac.RegistrationAssertions" /> class.
+            </summary>
+            <param name="subject">The container</param>
+            <param name="registration"></param>
+        </member>
+        <member name="M:FluentAssertions.Autofac.RegistrationAssertions.Named``1(System.String)">
+            <summary>
+              Asserts that the specified <see typeparamref="TService"/> has been registered on the current <see cref="T:Autofac.IContainer"/> with the specified name.
+            </summary>
+            <param name="name">The service name</param>
+            <typeparam name="TService">The service type</typeparam>
+        </member>
+        <member name="M:FluentAssertions.Autofac.RegistrationAssertions.Named(System.String,System.Type)">
+            <summary>
+              Asserts that the specified <see paramref="type"/> has been registered on the current <see cref="T:Autofac.IContainer"/> with the specified name.
+            </summary>
+            <param name="name">The service name</param>
+            <param name="type">The service type</param>
+        </member>
+        <member name="M:FluentAssertions.Autofac.RegistrationAssertions.Keyed``1(System.Object)">
+            <summary>
+              Asserts that the specified <see typeparamref="TService"/> has been registered on the current <see cref="T:Autofac.IContainer"/> with the specified key.
+            </summary>
+            <param name="key">The service key</param>
+            <typeparam name="TService">The service type</typeparam>
+        </member>
+        <member name="M:FluentAssertions.Autofac.RegistrationAssertions.Keyed(System.Object,System.Type)">
+            <summary>
+              Asserts that the specified <see typeparamref="TService"/> has been registered on the current <see cref="T:Autofac.IContainer"/> with the specified key.
+            </summary>
+            <param name="key">The service key</param>
+            <param name="type">The service type</param>
+        </member>
+        <member name="M:FluentAssertions.Autofac.RegistrationAssertions.SingleInstance">
+            <summary>
+              Asserts that the current service type has been registered as singleton on the current <see cref="T:Autofac.IContainer"/>.
+            </summary>
+        </member>
+        <member name="M:FluentAssertions.Autofac.RegistrationAssertions.InstancePerDependency">
+            <summary>
+              Asserts that the current service type has been registered as 'instance per dependency' on the current <see cref="T:Autofac.IContainer"/>.
+            </summary>
+        </member>
+        <member name="M:FluentAssertions.Autofac.RegistrationAssertions.InstancePerLifetimeScope">
+            <summary>
+              Asserts that the current service type has been registered as 'instance per lifetime scope' on the current <see cref="T:Autofac.IContainer"/>.
+            </summary>
+        </member>
+        <member name="M:FluentAssertions.Autofac.RegistrationAssertions.InstancePerMatchingLifetimeScope">
+            <summary>
+              Asserts that the current service type has been registered as 'instance per matching lifetime scope' on the current <see cref="T:Autofac.IContainer"/>.
+            </summary>
+        </member>
+        <member name="M:FluentAssertions.Autofac.RegistrationAssertions.InstancePerRequest">
+            <summary>
+              Asserts that the current service type has been registered as 'instance per request' on the current <see cref="T:Autofac.IContainer"/>.
+            </summary>
+        </member>
+        <member name="M:FluentAssertions.Autofac.RegistrationAssertions.InstancePerOwned``1">
+            <summary>
+              Asserts that the current service type has been registered as 'instance per owned' of the specified <see typeparamref="TService"/> on the current <see cref="T:Autofac.IContainer"/>.
+            </summary>
+        </member>
+        <member name="M:FluentAssertions.Autofac.RegistrationAssertions.InstancePerOwned(System.Type)">
+            <summary>
+              Asserts that the current service type has been registered as 'instance per owned' of the specified <see paramref="type"/> on the current <see cref="T:Autofac.IContainer"/>.
+            </summary>
+        </member>
+        <member name="M:FluentAssertions.Autofac.RegistrationAssertions.ExternallyOwned">
+            <summary>
+              Asserts that the current service type has been registered as 'externally owned' on the current <see cref="T:Autofac.IContainer"/>.
+            </summary>
+        </member>
+        <member name="M:FluentAssertions.Autofac.RegistrationAssertions.OwnedByLifetimeScope">
+            <summary>
+              Asserts that the current service type has been registered as 'owned by lifetime scope' on the current <see cref="T:Autofac.IContainer"/>.
+            </summary>
+        </member>
+        <member name="M:FluentAssertions.Autofac.RegistrationAssertions.Lifetime``1(System.Action{``0})">
+            <summary>
+              Asserts the current service type has been registered using the specified <see typeparamref="TLifetime"/> on the current <see cref="T:Autofac.IContainer"/>.
+            </summary>
+            <param name="assert">An optional custom assertion action to execute on the <typeparamref name="TLifetime"/></param>
+            <typeparam name="TLifetime"></typeparam>
+        </member>
+        <member name="M:FluentAssertions.Autofac.RegistrationAssertions.Shared(Autofac.Core.InstanceSharing)">
+            <summary>
+              Asserts the current service type has been registered using the specified <see cref="T:Autofac.Core.InstanceSharing"/> on the current <see cref="T:Autofac.IContainer"/>.
+            </summary>
+            <param name="sharing">The instance sharing mode</param>
+        </member>
+        <member name="M:FluentAssertions.Autofac.RegistrationAssertions.Owned(Autofac.Core.InstanceOwnership)">
+            <summary>
+              Asserts the current service type has been registered using the specified <see cref="T:Autofac.Core.InstanceOwnership"/> on the current <see cref="T:Autofac.IContainer"/>.
+            </summary>
+            <param name="ownership">The instance ownership mode</param>
+        </member>
+        <member name="M:FluentAssertions.Autofac.RegistrationAssertions.AutoActivate">
+            <summary>
+              Asserts the current service type has been registered with auto activation on the current <see cref="T:Autofac.IContainer"/>.
+            </summary>
+        </member>
+        <member name="M:FluentAssertions.Autofac.RegistrationAssertions.WithParameter(System.String,System.Object)">
+            <summary>
+              Asserts the current service type has been registered with the specified constructor parameter.
+            </summary>
+            <param name="name">The parameter name</param>
+            <param name="value">The parameter value</param>
+        </member>
+        <member name="M:FluentAssertions.Autofac.RegistrationAssertions.WithParameter(System.Func{Autofac.Core.Parameter,System.Boolean},System.Nullable{System.Int32})">
+            <summary>
+              Asserts the current service type has been registered with the specified constructor parameter.
+            </summary>
+            <param name="predicate">
+                Must evaluate to <c>true</c> for a parameter for the assertion to pass.
+            </param>
+            <param name="matchCount">
+                When <c>null</c>, assertion passes when one or more of the parameters matches the
+                <paramref name="predicate"/>. When set to a value, exactly this number of parameters must match the
+                <paramref name="predicate"/>.
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:FluentAssertions.Autofac.RegistrationAssertions.WithParameter(Autofac.NamedParameter)">
+            <summary>
+              Asserts the current service type has been registered with the specified constructor parameter.
+            </summary>
+            <param name="param">The parameter</param>
+        </member>
+        <member name="M:FluentAssertions.Autofac.RegistrationAssertions.WithParameter(Autofac.PositionalParameter)">
+            <summary>
+              Asserts the current service type has been registered with the specified constructor parameter.
+            </summary>
+            <param name="param">The parameter</param>
+        </member>
+        <member name="T:FluentAssertions.Autofac.ResolveAssertions">
+            <inheritdoc />
+            <summary>
+                Contains a number of methods to assert that expected services can actually be resolved from an <see cref="T:Autofac.IContainer" />.
+            </summary>
+        </member>
+        <member name="P:FluentAssertions.Autofac.ResolveAssertions.Identifier">
+            <inheritdoc />
+            <summary>
+                Returns the type of the subject the assertion applies on.
+            </summary>
+        </member>
+        <member name="M:FluentAssertions.Autofac.ResolveAssertions.#ctor(Autofac.IContainer,System.Type)">
+            <summary>
+                Initializes a new instance of the <see cref="T:FluentAssertions.Autofac.ResolveAssertions" /> class.
+            </summary>
+            <param name="container">The container</param>
+            <param name="serviceType">The service type</param>
+        </member>
+        <member name="M:FluentAssertions.Autofac.ResolveAssertions.As``1">
+            <summary>
+              Asserts that the specified implementation type can be resolved from the current <see cref="T:Autofac.IContainer"/>.
+            </summary>
+            <typeparam name="TImplementation">The type to resolve</typeparam>
+        </member>
+        <member name="M:FluentAssertions.Autofac.ResolveAssertions.AsSelf">
+            <summary>
+              Asserts that the registered service type can be resolved from the current <see cref="T:Autofac.IContainer"/>.
+            </summary>
+        </member>
+        <member name="M:FluentAssertions.Autofac.ResolveAssertions.AutoActivate">
+            <summary>
+              Asserts that the service type has been registered with auto activation on the current <see cref="T:Autofac.IContainer"/>.
+            </summary>
+        </member>
+        <member name="M:FluentAssertions.Autofac.ResolveAssertions.As(System.Type,System.Type[])">
+            <summary>
+              Asserts that the specified implementation type(s) can be resolved from the current <see cref="T:Autofac.IContainer"/>.
+            </summary>
+            <param name="type">The type to resolve</param>
+            <param name="types">Optional types to resolve</param>
+        </member>
+        <member name="T:FluentAssertions.Autofac.TestExtensions">
+            <summary>
+                Contains extension methods for Autofac Containers and Builder assertions.
+            </summary>
+        </member>
+        <member name="M:FluentAssertions.Autofac.TestExtensions.Container``1(``0,System.Action{Autofac.ContainerBuilder})">
+            <summary>
+              Returns an <see cref="T:Autofac.IContainer"/> suitable for testing the specified module.
+            </summary>
+            <param name="module">The module</param>
+            <param name="arrange">optional builder arrangement for the module</param>
+        </member>
+        <member name="M:FluentAssertions.Autofac.TestExtensions.Builder``1(``0,System.Action{Autofac.ContainerBuilder})">
+            <summary>
+              Returns an <see cref="T:FluentAssertions.Autofac.MockContainerBuilder"/> suitable for testing the specified module.
+            </summary>
+            <param name="module">The module</param>
+            <param name="arrange">optional builder arrangement for the module</param>
+        </member>
+        <member name="M:FluentAssertions.Autofac.TestExtensions.Container``1(``0,System.Action{Autofac.ContainerBuilder,``0})">
+            <summary>
+              Returns an <see cref="T:Autofac.IContainer"/> suitable for testing the specified module.
+            </summary>
+            <param name="module">The module</param>
+            <param name="arrange">optional builder arrangement for the module</param>
+        </member>
+        <member name="M:FluentAssertions.Autofac.TestExtensions.Builder``1(``0,System.Action{Autofac.ContainerBuilder,``0})">
+            <summary>
+              Returns an <see cref="T:FluentAssertions.Autofac.MockContainerBuilder"/> suitable for testing the specified module.
+            </summary>
+            <param name="module">The module</param>
+            <param name="arrange">optional builder arrangement for the module</param>
+        </member>
+        <member name="T:FluentAssertions.Autofac.TypeScanningAssertions">
+            <inheritdoc />
+            <summary>
+                Contains a number of methods to assert registered types on an <see cref="T:Autofac.IContainer" />.
+            </summary>
+        </member>
+        <member name="F:FluentAssertions.Autofac.TypeScanningAssertions.Types">
+            <summary>
+            The types.
+            </summary>
+        </member>
+        <member name="P:FluentAssertions.Autofac.TypeScanningAssertions.Identifier">
+            <inheritdoc />
+            <summary>
+                Returns the type of the subject the assertion applies on.
+            </summary>
+        </member>
+        <member name="M:FluentAssertions.Autofac.TypeScanningAssertions.#ctor(Autofac.IContainer,System.Collections.Generic.IEnumerable{System.Type})">
+            <summary>
+               Initializes a new instance of the <see cref="T:FluentAssertions.Autofac.TypeScanningAssertions" /> class.
+            </summary>
+            <param name="subject"></param>
+            <param name="types">The types to assert</param>
+            <exception cref="T:System.ArgumentNullException"></exception>
+        </member>
+        <member name="M:FluentAssertions.Autofac.TypeScanningAssertions.Where(System.Func{System.Type,System.Boolean})">
+            <summary>
+            Specifies a subset of types to register from a scanned assembly using 
+            the specified <paramref name="predicate"/>.
+            </summary>
+        </member>
+        <member name="M:FluentAssertions.Autofac.TypeScanningAssertions.Except``1">
+            <summary>
+            Specifies a subset of types to register from a scanned assembly.
+            </summary>
+        </member>
+        <member name="M:FluentAssertions.Autofac.TypeScanningAssertions.As``1">
+            <summary>
+            Asserts that the scanned types can be resolved from the current <see cref="T:Autofac.IContainer"/> 
+            as the specified <typeparamref name="T"/>.
+            </summary>
+        </member>
+        <member name="M:FluentAssertions.Autofac.TypeScanningAssertions.As(System.Type)">
+            <summary>
+            Asserts that the scanned types can be resolved from the current <see cref="T:Autofac.IContainer"/> 
+            as the specified <paramref name="type"/>.
+            </summary>
+        </member>
+        <member name="M:FluentAssertions.Autofac.TypeScanningAssertions.AsSelf">
+            <summary>
+            Asserts that the scanned types can be resolved from the current <see cref="T:Autofac.IContainer"/> as self.
+            </summary>
+        </member>
+        <member name="M:FluentAssertions.Autofac.TypeScanningAssertions.AsImplementedInterfaces">
+            <summary>
+            Asserts that the scanned types can be resolved from the current <see cref="T:Autofac.IContainer"/> 
+            as their implemented interfaces.
+            </summary>
+        </member>
+        <member name="M:FluentAssertions.Autofac.TypeScanningAssertions.As(System.Func{System.Type,System.Type})">
+            <summary>
+            Asserts that the scanned types can be resolved from the current <see cref="T:Autofac.IContainer"/> 
+            as the type returned using the specified lambda.
+            </summary>
+        </member>
+    </members>
+</doc>
