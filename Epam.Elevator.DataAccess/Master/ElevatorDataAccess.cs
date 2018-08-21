@@ -2,11 +2,7 @@
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Epam.Elevator.DataAccess.Master.Interfaces;
-using Epam.Elevator.Models.Master;
 using ElevatorModel = Epam.Elevator.Models.Master;
 
 namespace Epam.Elevator.DataAccess.Master
@@ -98,16 +94,18 @@ namespace Epam.Elevator.DataAccess.Master
                     SqlDataReader sqlDataReader = command.ExecuteReader();
                     while (sqlDataReader.Read())
                     {
-                        ElevatorModel.Elevator elevator = new ElevatorModel.Elevator();
-                        elevator.ElevatorId = (int)sqlDataReader["ElevatorId"];
-                        elevator.ElevatorName = (String)sqlDataReader["ElevatorName"];
-                        elevator.FloorDuration=(TimeSpan)sqlDataReader["FloorDuration"];
-                        elevator.MainStatusId= (int)sqlDataReader["MainStatusId"];
-                        elevator.MaxWeight= (int)sqlDataReader["MaxWeight"];
-                        elevator.ModifiedByUserId = (int)sqlDataReader["ModifiedByUserId"];
-                        elevator.ModifiedDate = (DateTime)sqlDataReader["ModifiedDate"];
-                        elevator.CreatedByUserId = (int)sqlDataReader["CreateByUserId"];
-                        elevator.CreatedDate = (DateTime)sqlDataReader["CreateDate"];
+                        ElevatorModel.Elevator elevator = new ElevatorModel.Elevator
+                        {
+                            ElevatorId = Convert.ToInt32(sqlDataReader["ElevatorId"]),
+                            ElevatorName = Convert.ToString(sqlDataReader["ElevatorName"]),
+                            FloorDuration = (TimeSpan)sqlDataReader["FloorDuration"],
+                            MainStatusId = Convert.ToInt32(sqlDataReader["MainStatusId"]),
+                            MaxWeight = Convert.ToInt32(sqlDataReader["MaxWeight"]),
+                            ModifiedByUserId = Convert.ToInt32(sqlDataReader["ModifiedByUserId"]),
+                            ModifiedDate = Convert.ToDateTime(sqlDataReader["ModifiedDate"]),
+                            CreatedByUserId = Convert.ToInt32(sqlDataReader["CreateByUserId"]),
+                            CreatedDate = Convert.ToDateTime(sqlDataReader["CreateDate"])
+                        };
                         elevatorList.Add(elevator);
                     }
                 }
@@ -130,16 +128,18 @@ namespace Epam.Elevator.DataAccess.Master
                     SqlDataReader sqlDataReader = command.ExecuteReader();
                     while (sqlDataReader.Read())
                     {
-                        ElevatorModel.Elevator elevator = new ElevatorModel.Elevator();
-                        elevator.ElevatorId = (int)sqlDataReader["ElevatorId"];
-                        elevator.ElevatorName = (String)sqlDataReader["ElevatorName"];
-                        elevator.FloorDuration = (TimeSpan)sqlDataReader["FloorDuration"];
-                        elevator.MainStatusId = (int)sqlDataReader["MainStatusId"];
-                        elevator.MaxWeight = (int)sqlDataReader["MaxWeight"];
-                        elevator.ModifiedByUserId = (int)sqlDataReader["ModifiedByUserId"];
-                        elevator.ModifiedDate = (DateTime)sqlDataReader["ModifiedDate"];
-                        elevator.CreatedByUserId = (int)sqlDataReader["CreateByUserId"];
-                        elevator.CreatedDate = (DateTime)sqlDataReader["CreateDate"];
+                        ElevatorModel.Elevator elevator = new ElevatorModel.Elevator
+                        {
+                            ElevatorId = Convert.ToInt32(sqlDataReader["ElevatorId"]),
+                            ElevatorName = Convert.ToString(sqlDataReader["ElevatorName"]),
+                            FloorDuration = (TimeSpan)sqlDataReader["FloorDuration"],
+                            MainStatusId = Convert.ToInt32(sqlDataReader["MainStatusId"]),
+                            MaxWeight = Convert.ToInt32(sqlDataReader["MaxWeight"]),
+                            ModifiedByUserId = Convert.ToInt32(sqlDataReader["ModifiedByUserId"]),
+                            ModifiedDate = Convert.ToDateTime(sqlDataReader["ModifiedDate"]),
+                            CreatedByUserId = Convert.ToInt32(sqlDataReader["CreateByUserId"]),
+                            CreatedDate = Convert.ToDateTime(sqlDataReader["CreateDate"])
+                        };
                         elevatorList.Add(elevator);
                     }
                 }
@@ -150,5 +150,6 @@ namespace Epam.Elevator.DataAccess.Master
             return elevatorList;
         }
 
+       
     }
 }

@@ -2,6 +2,7 @@
 using Epam.Elevator.DataAccess.Master;
 using Epam.Elevator.Models;
 using Epam.Elevator.Models.Master;
+using Epam.Elevator.Presentation.Master;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -24,7 +25,21 @@ namespace Epam.Elevator.Presentation.Controllers
         public ActionResult Details(int id)
         {
             UserBusiness userBusiness = new UserBusiness(new UserDataAccess());
+            LookupBusiness lookupBusiness = new LookupBusiness(new LookupDataAccess());
             User user = userBusiness.Get(id);
+            UserModel userModel = new UserModel();
+            userModel.Address = user.Address;
+            userModel.CreatedByUserId = user.CreatedByUserId;
+            userModel.CreatedDate = user.CreatedDate;
+            userModel.DateOfBirth = user.DateOfBirth;
+            userModel.EmailId = user.EmailId;
+            userModel.FirstName = user.FirstName;
+            userModel.Gender = (Enums.Gender)Enum.Parse(typeof(Enums.Gender), lookupBusiness.GetLookupValue(user.GenderId));
+            userModel.LastName = user.LastName;
+            userModel.ModifiedByUserId = user.ModifiedByUserId;
+            userModel.ModifiedDate = user.ModifiedDate;
+            userModel.Password = user.Password;
+            userModel.UserId = user.UserId;
             return View(user);
         }
        
@@ -41,6 +56,7 @@ namespace Epam.Elevator.Presentation.Controllers
           //  try
           //  {               
                 UserBusiness userBusiness = new UserBusiness(new UserDataAccess());
+                LookupBusiness lookupBusiness = new LookupBusiness(new LookupDataAccess()); 
                 User user = new User();
                 user.CreatedByUserId = 1;// (int)Session["UserId"];
                 user.ModifiedByUserId = 2;// (int)Session["UserId"];
@@ -51,11 +67,8 @@ namespace Epam.Elevator.Presentation.Controllers
                 user.CreatedDate = DateTime.Now;
                 user.ModifiedDate = DateTime.Now;
                 user.DateOfBirth = DateTime.Now;
-                user.Gender = (Enums.Gender)Enum.Parse(typeof(Enums.Gender), formCollection["Gender"]);
+                user.GenderId = lookupBusiness.GetLookupId("GenderId", formCollection["Gender"]);
                 user.Password = formCollection["Password"];
-
-               // string iString = "2005-05-05 22:12 PM";
-               // DateTime oDate = DateTime.ParseExact(iString, "yyyy-MM-dd HH:mm tt", null);
                 userBusiness.Create(user);
                 return RedirectToAction("Index");
             //}
@@ -69,7 +82,21 @@ namespace Epam.Elevator.Presentation.Controllers
         public ActionResult Edit(int id)
         {
             UserBusiness userBusiness = new UserBusiness(new UserDataAccess());
+            LookupBusiness lookupBusiness = new LookupBusiness(new LookupDataAccess());
             User user = userBusiness.Get(id);
+            UserModel userModel = new UserModel();
+            userModel.Address = user.Address;
+            userModel.CreatedByUserId = user.CreatedByUserId;
+            userModel.CreatedDate = user.CreatedDate;
+            userModel.DateOfBirth = user.DateOfBirth;
+            userModel.EmailId = user.EmailId;
+            userModel.FirstName = user.FirstName;
+            userModel.Gender = (Enums.Gender)Enum.Parse(typeof(Enums.Gender), lookupBusiness.GetLookupValue(user.GenderId));
+            userModel.LastName = user.LastName;
+            userModel.ModifiedByUserId = user.ModifiedByUserId;
+            userModel.ModifiedDate = user.ModifiedDate;
+            userModel.Password = user.Password;
+            userModel.UserId = user.UserId;
             return View(user);
         }
 
@@ -81,6 +108,7 @@ namespace Epam.Elevator.Presentation.Controllers
             //{
                 // TODO: Add update logic here
                 UserBusiness userBusiness = new UserBusiness(new UserDataAccess());
+                LookupBusiness lookupBusiness = new LookupBusiness(new LookupDataAccess());
                 User user = new User();
                 user.CreatedByUserId = 1;// (int)Session["UserId"];
                 user.ModifiedByUserId = 2;// (int)Session["UserId"];
@@ -93,8 +121,7 @@ namespace Epam.Elevator.Presentation.Controllers
                 user.CreatedDate = DateTime.Now;
                 user.ModifiedDate = DateTime.Now;
                 user.DateOfBirth = DateTime.Now;
-                user.Gender = (Enums.Gender)Enum.Parse(typeof(Enums.Gender), formCollection["Gender"]);
-                userBusiness.Update(user);
+                user.GenderId = lookupBusiness.GetLookupId("GenderId", formCollection["Gender"]);
                 return RedirectToAction("Index");
             //}
             //catch
@@ -108,8 +135,22 @@ namespace Epam.Elevator.Presentation.Controllers
         {
 
             UserBusiness userBusiness = new UserBusiness(new UserDataAccess());
+            LookupBusiness lookupBusiness = new LookupBusiness(new LookupDataAccess());
             User user = userBusiness.Get(id);
-            return View(user);
+            UserModel userModel = new UserModel();
+            userModel.Address = user.Address;
+            userModel.CreatedByUserId = user.CreatedByUserId;
+            userModel.CreatedDate = user.CreatedDate;
+            userModel.DateOfBirth = user.DateOfBirth;
+            userModel.EmailId = user.EmailId;
+            userModel.FirstName = user.FirstName;
+            userModel.Gender = (Enums.Gender)Enum.Parse(typeof(Enums.Gender),lookupBusiness.GetLookupValue(user.GenderId));
+            userModel.LastName = user.LastName;
+            userModel.ModifiedByUserId = user.ModifiedByUserId;
+            userModel.ModifiedDate = user.ModifiedDate;
+            userModel.Password = user.Password;
+            userModel.UserId = user.UserId;
+            return View(userModel);
         }
 
         // POST: User/Delete/5

@@ -483,10 +483,10 @@ $.extend($.validator, {
 			/// </summary>
 			/// <returns type="Number" />
 
-			return this.objectLength(this.invalid);
+			return this.ObjectLength(this.invalid);
 		},
 		
-		objectLength: function( obj ) {
+		ObjectLength: function( obj ) {
 			var count = 0;
 			for ( var i in obj )
 				count++;
@@ -540,7 +540,7 @@ $.extend($.validator, {
 				!this.name && validator.settings.debug && window.console && console.error( "%o has no name assigned", this);
 			
 				// select only the first element for each name, and only those with rules specified
-				if ( this.name in rulesCache || !validator.objectLength($(this).rules()) )
+				if ( this.name in rulesCache || !validator.ObjectLength($(this).rules()) )
 					return false;
 				
 				rulesCache[this.name] = true;
@@ -615,7 +615,7 @@ $.extend($.validator, {
 			}
 			if (dependencyMismatch)
 				return;
-			if ( this.objectLength(rules) )
+			if ( this.ObjectLength(rules) )
 				this.successList.push(element);
 			return true;
 		},
@@ -1246,7 +1246,7 @@ $.format = $.validator.format;
 // IE has native support, in other browsers, use event caputuring (neither bubbles)
 
 // provides delegate(type: String, delegate: Selector, handler: Callback) plugin for easier event delegation
-// handler is only called when $(event.target).is(delegate), in the scope of the jquery-object for event.target 
+// handler is only called when $(event.target).is(delegate), in the scope of the jquery-Object for event.target 
 ;(function($) {
 	// only implement if not provided by jQuery core (since 1.4)
 	// TODO verify if jQuery 1.4's implementation is compatible with older jQuery special-event APIs

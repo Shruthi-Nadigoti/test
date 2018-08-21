@@ -19,16 +19,14 @@ namespace Epam.Elevator.DataAccess.Master
             bool result = false;
             //try
             // {
-            int genderLookupId = lookupDataAccess.GetLookupId("Gender", user.Gender.ToString());
-
             using (SqlConnection sqlConnection = new SqlConnection(connectionString))
             {
-                SqlCommand command = new SqlCommand("INSERT INTO MasterUsers(FirstName,LastName,Password,DateOfBirth,Gender,EmailId,Address,CreatedByUserId,CreateDate,ModifiedByUserId,ModifiedDate)values(@firstName,@lastName,@password,@dateOfBirth,@gender,@emailId,@address,@createdByUserId,@createDate,@modifiedByUserId,@modifiedDate)", sqlConnection);
+                SqlCommand command = new SqlCommand("INSERT INTO MasterUsers(FirstName,LastName,Password,DateOfBirth,GenderId,EmailId,Address,CreatedByUserId,CreateDate,ModifiedByUserId,ModifiedDate)values(@firstName,@lastName,@password,@dateOfBirth,@GenderId,@emailId,@address,@createdByUserId,@createDate,@modifiedByUserId,@modifiedDate)", sqlConnection);
                 command.Parameters.AddWithValue("@firstName", user.FirstName);
                 command.Parameters.AddWithValue("@lastName", user.LastName);
                 command.Parameters.AddWithValue("@password", user.Password);
                 command.Parameters.AddWithValue("@dateOfBirth", user.DateOfBirth);
-                command.Parameters.AddWithValue("@gender", genderLookupId);
+                command.Parameters.AddWithValue("@GenderId", user.GenderId);
                 command.Parameters.AddWithValue("@address", user.Address);
                 command.Parameters.AddWithValue("@createdByUserId", user.CreatedByUserId);
                 command.Parameters.AddWithValue("@createDate", user.CreatedDate);
@@ -53,22 +51,22 @@ namespace Epam.Elevator.DataAccess.Master
             bool result = false;
             //try
             //{
-                int genderLookupId = lookupDataAccess.GetLookupId("Gender", user.Gender.ToString());
-                using (SqlConnection sqlConnection = new SqlConnection(connectionString))
-                {
-                    SqlCommand command = new SqlCommand("UPDATE MasterUsers SET FirstName = @firstName, LastName = @lastName," +
-                                    "Password=@password,DateOfBirth = @dateOfBirth,EmailId=@emailId,Gender=@gender,Address=@address where UserId=@userId", sqlConnection);
-                    command.Parameters.AddWithValue("@firstName", user.FirstName);
-                    command.Parameters.AddWithValue("@userId", user.UserId);
-                    command.Parameters.AddWithValue("@lastName", user.LastName);
-                    command.Parameters.AddWithValue("@password", user.Password);
-                    command.Parameters.AddWithValue("@dateOfBirth", user.DateOfBirth);
-                    command.Parameters.AddWithValue("@gender", genderLookupId);
-                    command.Parameters.AddWithValue("@address", user.Address);
-                    command.Parameters.AddWithValue("@emailId", user.EmailId);
-                    sqlConnection.Open();
-                    result = command.ExecuteNonQuery() > 0 ? true : false;
-                }
+            int GenderIdLookupId = lookupDataAccess.GetLookupId("GenderId", user.GenderId.ToString());
+            using (SqlConnection sqlConnection = new SqlConnection(connectionString))
+            {
+                SqlCommand command = new SqlCommand("UPDATE MasterUsers SET FirstName = @firstName, LastName = @lastName," +
+                                "Password=@password,DateOfBirth = @dateOfBirth,EmailId=@emailId,GenderId=@GenderId,Address=@address where UserId=@userId", sqlConnection);
+                command.Parameters.AddWithValue("@firstName", user.FirstName);
+                command.Parameters.AddWithValue("@userId", user.UserId);
+                command.Parameters.AddWithValue("@lastName", user.LastName);
+                command.Parameters.AddWithValue("@password", user.Password);
+                command.Parameters.AddWithValue("@dateOfBirth", user.DateOfBirth);
+                command.Parameters.AddWithValue("@GenderId", user.GenderId);
+                command.Parameters.AddWithValue("@address", user.Address);
+                command.Parameters.AddWithValue("@emailId", user.EmailId);
+                sqlConnection.Open();
+                result = command.ExecuteNonQuery() > 0 ? true : false;
+            }
 
             //}
             //catch
@@ -99,34 +97,34 @@ namespace Epam.Elevator.DataAccess.Master
         }
         public User Get(int userId)
         {
-            User user = new User();
+            User user = null;
             //try
             //{
-                using (SqlConnection sqlConnection = new SqlConnection(connectionString))
+            using (SqlConnection sqlConnection = new SqlConnection(connectionString))
+            {
+                SqlCommand command = new SqlCommand("SELECT UserId,FirstName,EmailId,LastName,Password,DateOfBirth,GenderId,Address,CreatedByUserId,CreateDate,ModifiedByUserId,ModifiedDate FROM MasterUsers WHERE UserId = @userId", sqlConnection);
+                command.Parameters.AddWithValue("@userId", userId);
+                sqlConnection.Open();
+                SqlDataReader sqlDataReader = command.ExecuteReader();
+                if (sqlDataReader.Read())
                 {
-                    SqlCommand command = new SqlCommand("SELECT UserId,FirstName,EmailId,LastName,Password,DateOfBirth,Gender,Address,CreatedByUserId,CreateDate,ModifiedByUserId,ModifiedDate FROM MasterUsers WHERE UserId = @userId", sqlConnection);
-                    command.Parameters.AddWithValue("@userId", userId);
-                    sqlConnection.Open();
-                    SqlDataReader sqlDataReader = command.ExecuteReader();
-                    if (sqlDataReader.Read())
+                    user = new User
                     {
-                        user.UserId = (int)sqlDataReader["UserId"];
-                        user.FirstName = (String)sqlDataReader["FirstName"];
-                        user.LastName = (String)sqlDataReader["LastName"];
-                        //   user.Gender = (String)sqlDataReader["Gender"]; have to think 
-                        String lookupString = lookupDataAccess.GetLookupValue((int)sqlDataReader["Gender"]);
-                    lookupString = "Female";
-                        user.Gender = (Enums.Gender)Enum.Parse(typeof(Enums.Gender), lookupString);
-                        user.DateOfBirth = (DateTime)sqlDataReader["DateOfBirth"];
-                        user.EmailId = (String)sqlDataReader["EmailId"];
-                        user.Password = (String)sqlDataReader["Password"];
-                        user.ModifiedByUserId = (int)sqlDataReader["ModifiedByUserId"];
-                        user.ModifiedDate = (DateTime)sqlDataReader["ModifiedDate"];
-                        user.CreatedByUserId = (int)sqlDataReader["CreatedByUserId"];
-                        user.CreatedDate = (DateTime)sqlDataReader["CreateDate"];
-                        user.Address = (String)sqlDataReader["Address"];
-                    }
+                        UserId = Convert.ToInt32(sqlDataReader["UserId"]),
+                        FirstName = Convert.ToString(sqlDataReader["FirstName"]),
+                        LastName = Convert.ToString(sqlDataReader["LastName"]),
+                        GenderId = Convert.ToInt32(sqlDataReader["GenderId"]),
+                        DateOfBirth = Convert.ToDateTime(sqlDataReader["DateOfBirth"]),
+                        EmailId = Convert.ToString(sqlDataReader["EmailId"]),
+                        ModifiedByUserId = Convert.ToInt32(sqlDataReader["ModifiedByUserId"]),
+                        ModifiedDate = Convert.ToDateTime(sqlDataReader["ModifiedDate"]),
+                        CreatedByUserId = Convert.ToInt32(sqlDataReader["CreatedByUserId"]),
+                        CreatedDate = Convert.ToDateTime(sqlDataReader["CreateDate"]),
+                        Address = Convert.ToString(sqlDataReader["Address"]),
+                        Password = Convert.ToString(sqlDataReader["Password"])
+                    };
                 }
+            }
             //}
             //catch
             //{
@@ -138,31 +136,31 @@ namespace Epam.Elevator.DataAccess.Master
             List<User> userList = new List<User>();
             //try
             //{
-                using (SqlConnection sqlConnection = new SqlConnection(connectionString))
+            using (SqlConnection sqlConnection = new SqlConnection(connectionString))
+            {
+                SqlCommand command = new SqlCommand("SELECT UserId,FirstName,LastName,Password,DateOfBirth,GenderId,EmailId,Address,CreatedByUserId,CreateDate,ModifiedByUserId,ModifiedDate FROM MasterUsers", sqlConnection);
+                sqlConnection.Open();
+                SqlDataReader sqlDataReader = command.ExecuteReader();
+                while (sqlDataReader.Read())
                 {
-                    SqlCommand command = new SqlCommand("SELECT UserId,FirstName,LastName,Password,DateOfBirth,Gender,EmailId,Address,CreatedByUserId,CreateDate,ModifiedByUserId,ModifiedDate FROM MasterUsers", sqlConnection);
-                    sqlConnection.Open();
-                    SqlDataReader sqlDataReader = command.ExecuteReader();
-                    while (sqlDataReader.Read())
+                    User user = new User
                     {
-                        User user = new User();
-                        user.UserId = (int)sqlDataReader["UserId"];
-                        user.FirstName = (String)sqlDataReader["FirstName"];
-                        user.LastName = (String)sqlDataReader["LastName"];
-                        String lookupString = lookupDataAccess.GetLookupValue((int)sqlDataReader["Gender"]);
-                    lookupString = "Female";
-                        user.Gender = (Enums.Gender)Enum.Parse(typeof(Enums.Gender), lookupString);
-                        user.DateOfBirth = (DateTime)sqlDataReader["DateOfBirth"];
-                        user.EmailId = (String)sqlDataReader["EmailId"];
-                        user.ModifiedByUserId = (int)sqlDataReader["ModifiedByUserId"];
-                        user.ModifiedDate = (DateTime)sqlDataReader["ModifiedDate"];
-                        user.CreatedByUserId = (int)sqlDataReader["CreatedByUserId"];
-                        user.CreatedDate = (DateTime)sqlDataReader["CreateDate"];
-                        user.Address = (String)sqlDataReader["Address"];
-                        user.Password = (String)sqlDataReader["Password"];
-                        userList.Add(user);
-                    }
+                        UserId = Convert.ToInt32(sqlDataReader["UserId"]),
+                        FirstName = Convert.ToString(sqlDataReader["FirstName"]),
+                        LastName = Convert.ToString(sqlDataReader["LastName"]),
+                        GenderId = Convert.ToInt32(sqlDataReader["GenderId"]),
+                        DateOfBirth = Convert.ToDateTime(sqlDataReader["DateOfBirth"]),
+                        EmailId = Convert.ToString(sqlDataReader["EmailId"]),
+                        ModifiedByUserId = Convert.ToInt32(sqlDataReader["ModifiedByUserId"]),
+                        ModifiedDate = Convert.ToDateTime(sqlDataReader["ModifiedDate"]),
+                        CreatedByUserId = Convert.ToInt32(sqlDataReader["CreatedByUserId"]),
+                        CreatedDate = Convert.ToDateTime(sqlDataReader["CreateDate"]),
+                        Address = Convert.ToString(sqlDataReader["Address"]),
+                        Password = Convert.ToString(sqlDataReader["Password"])
+                    };
+                    userList.Add(user);
                 }
+            }
             //}
             //catch
             //{
@@ -176,26 +174,27 @@ namespace Epam.Elevator.DataAccess.Master
             {
                 using (SqlConnection sqlConnection = new SqlConnection(connectionString))
                 {
-                    SqlCommand command = new SqlCommand("SELECT FirstName,LastName,Password,DateOfBirth,Gender,EmailId,Address,CreatedByUserId,CreateDate,ModifiedByUserId,ModifiedDate FROM MasterUsers WHERE FirstName=@searchString or LastName=@searchString or Gender=@searchString or EmailId=@searchString or Address=@searchString", sqlConnection);
-                    command.Parameters.AddWithValue("@searchString", "%"+searchString+"%");
+                    SqlCommand command = new SqlCommand("SELECT FirstName,LastName,Password,DateOfBirth,GenderId,EmailId,Address,CreatedByUserId,CreateDate,ModifiedByUserId,ModifiedDate FROM MasterUsers WHERE FirstName=@searchString or LastName=@searchString or GenderId=@searchString or EmailId=@searchString or Address=@searchString", sqlConnection);
+                    command.Parameters.AddWithValue("@searchString", "%" + searchString + "%");
                     sqlConnection.Open();
                     SqlDataReader sqlDataReader = command.ExecuteReader();
                     while (sqlDataReader.Read())
                     {
-                        User user = new User();
-                        user.UserId = (int)sqlDataReader["UserId"];
-                        user.FirstName = (String)sqlDataReader["FirstName"];
-                        user.LastName = (String)sqlDataReader["LastName"];
-                        String lookupString = lookupDataAccess.GetLookupValue((int)sqlDataReader["Gender"]);
-                        user.Gender = (Enums.Gender)Enum.Parse(typeof(Enums.Gender), lookupString);
-                        user.DateOfBirth = (DateTime)sqlDataReader["DateOfBirth"];
-                        user.EmailId = (String)sqlDataReader["EmailId"];
-                        user.ModifiedByUserId = (int)sqlDataReader["ModifiedByUserId"];
-                        user.ModifiedDate = (DateTime)sqlDataReader["ModifiedDate"];
-                        user.CreatedByUserId = (int)sqlDataReader["CreatedByUserId"];
-                        user.CreatedDate = (DateTime)sqlDataReader["CreateDate"];
-                        user.Address = (String)sqlDataReader["Address"];
-                        user.Password = (String)sqlDataReader["Password"];
+                        User user = new User
+                        {
+                            UserId = (int)sqlDataReader["UserId"],
+                            FirstName = (String)sqlDataReader["FirstName"],
+                            LastName = (String)sqlDataReader["LastName"],
+                            GenderId = (int)sqlDataReader["GenderId"],
+                            DateOfBirth = (DateTime)sqlDataReader["DateOfBirth"],
+                            EmailId = (String)sqlDataReader["EmailId"],
+                            ModifiedByUserId = (int)sqlDataReader["ModifiedByUserId"],
+                            ModifiedDate = (DateTime)sqlDataReader["ModifiedDate"],
+                            CreatedByUserId = (int)sqlDataReader["CreatedByUserId"],
+                            CreatedDate = (DateTime)sqlDataReader["CreateDate"],
+                            Address = (String)sqlDataReader["Address"],
+                            Password = (String)sqlDataReader["Password"],
+                        };
                         userList.Add(user);
                     }
                 }

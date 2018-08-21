@@ -5,19 +5,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Epam.Elevator.Models.Master;
+using Epam.Elevator.DataAccess.Master.Interfaces;
 
 namespace Epam.Elevator.Business.Master
 {
-    class LookupBusiness : Lookup
+    public class LookupBusiness 
     {
-        Lookup lookupDataAccess;
-        public LookupBusiness(Lookup lookupDataAccess)
+        ILookupDataAccess lookupDataAccess;
+        public LookupBusiness(ILookupDataAccess lookupDataAccess)
         {
             this.lookupDataAccess = lookupDataAccess;
         }
         public bool UpdateLookup()
         {
-            lookupDataAccess.LookupId = 1;
            // lookupDataAccess.UpdateLookup();
             return true;
         }
@@ -35,6 +35,17 @@ namespace Epam.Elevator.Business.Master
         {
             //lookupDataAccess.SaveLookup();
             return true;
+        }
+
+        public int GetLookupId(string key, string value)
+        {
+            int lookupId=lookupDataAccess.GetLookupId(key,value);
+            return lookupId;
+        }
+
+        public string GetLookupValue(int id)
+        {
+            throw new NotImplementedException();
         }
     }
 }

@@ -154,7 +154,11 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\ElevatorModel.cs" />
+    <Compile Include="Models\Enums.cs" />
+    <Compile Include="Models\Master\ElevatorModel.cs" />
+    <Compile Include="Models\Master\FloorModel.cs" />
+    <Compile Include="Models\Master\UserModel.cs" />
+    <Compile Include="Models\Transactions\ElevatorStatusModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

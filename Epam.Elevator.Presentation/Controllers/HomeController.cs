@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Epam.Elevator.Business.Master;
+using Epam.Elevator.DataAccess.Master;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -10,6 +12,10 @@ namespace Epam.Elevator.Presentation.Controllers
     {
         public ActionResult Index()
         {
+            ElevatorBusiness elevatorBusiness = new ElevatorBusiness(new ElevatorDataAccess());
+            FloorBusiness floorBusiness = new FloorBusiness(new FloorDataAccess());
+            ViewBag.elevatorList = elevatorBusiness.GetElevators();
+            ViewBag.floorList = floorBusiness.GetFloors();
             return View();
         }
 

@@ -1,4 +1,4 @@
-﻿@model IEnumerable<Epam.Elevator.Models.Master.Elevator>
+﻿@model IEnumerable<Epam.Elevator.Presentation.Master.ElevatorModel>
 
 @{
     ViewBag.Title = "Details";
@@ -22,7 +22,7 @@
             @Html.DisplayNameFor(model => model.FloorDuration)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.MainStatusId)
+            @Html.DisplayNameFor(model => model.MainStatus)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.CreatedByUserId)
@@ -51,7 +51,7 @@
             @Html.DisplayFor(modelItem => item.FloorDuration)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.MainStatusId)
+            @Html.DisplayFor(modelItem => item.MainStatus)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.CreatedByUserId)

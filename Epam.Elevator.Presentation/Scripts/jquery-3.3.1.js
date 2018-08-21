@@ -15,7 +15,7 @@
 
 	"use strict";
 
-	if ( typeof module === "object" && typeof module.exports === "object" ) {
+	if ( typeof module === "Object" && typeof module.exports === "Object" ) {
 
 		// For CommonJS and CommonJS-like environments where a proper `window`
 		// is present, execute the factory and get jQuery.
@@ -74,8 +74,8 @@ var support = {};
 var isFunction = function isFunction( obj ) {
 
       // Support: Chrome <=57, Firefox <=52
-      // In some browsers, typeof returns "function" for HTML <object> elements
-      // (i.e., `typeof document.createElement( "object" ) === "function"`).
+      // In some browsers, typeof returns "function" for HTML <Object> elements
+      // (i.e., `typeof document.createElement( "Object" ) === "function"`).
       // We don't want to classify *any* DOM node as a function.
       return typeof obj === "function" && typeof obj.nodeType !== "number";
   };
@@ -118,8 +118,8 @@ function toType( obj ) {
 	}
 
 	// Support: Android <=2.3 only (functionish RegExp)
-	return typeof obj === "object" || typeof obj === "function" ?
-		class2type[ toString.call( obj ) ] || "object" :
+	return typeof obj === "Object" || typeof obj === "function" ?
+		class2type[ toString.call( obj ) ] || "Object" :
 		typeof obj;
 }
 /* global Symbol */
@@ -134,7 +134,7 @@ var
 	// Define a local copy of jQuery
 	jQuery = function( selector, context ) {
 
-		// The jQuery object is actually just the init constructor 'enhanced'
+		// The jQuery Object is actually just the init constructor 'enhanced'
 		// Need init if jQuery is called (just allow error to be thrown if not included)
 		return new jQuery.fn.init( selector, context );
 	},
@@ -150,7 +150,7 @@ jQuery.fn = jQuery.prototype = {
 
 	constructor: jQuery,
 
-	// The default length of a jQuery object is 0
+	// The default length of a jQuery Object is 0
 	length: 0,
 
 	toArray: function() {
@@ -177,7 +177,7 @@ jQuery.fn = jQuery.prototype = {
 		// Build a new jQuery matched element set
 		var ret = jQuery.merge( this.constructor(), elems );
 
-		// Add the old object onto the stack (as a reference)
+		// Add the old Object onto the stack (as a reference)
 		ret.prevObject = this;
 
 		// Return the newly-formed element set
@@ -241,7 +241,7 @@ jQuery.extend = jQuery.fn.extend = function() {
 	}
 
 	// Handle case when target is a string or something (possible in deep copy)
-	if ( typeof target !== "object" && !isFunction( target ) ) {
+	if ( typeof target !== "Object" && !isFunction( target ) ) {
 		target = {};
 	}
 
@@ -256,7 +256,7 @@ jQuery.extend = jQuery.fn.extend = function() {
 		// Only deal with non-null/undefined values
 		if ( ( options = arguments[ i ] ) != null ) {
 
-			// Extend the base object
+			// Extend the base Object
 			for ( name in options ) {
 				src = target[ name ];
 				copy = options[ name ];
@@ -266,7 +266,7 @@ jQuery.extend = jQuery.fn.extend = function() {
 					continue;
 				}
 
-				// Recurse if we're merging plain objects or arrays
+				// Recurse if we're merging plain Objects or arrays
 				if ( deep && copy && ( jQuery.isPlainObject( copy ) ||
 					( copyIsArray = Array.isArray( copy ) ) ) ) {
 
@@ -278,7 +278,7 @@ jQuery.extend = jQuery.fn.extend = function() {
 						clone = src && jQuery.isPlainObject( src ) ? src : {};
 					}
 
-					// Never move original objects, clone them
+					// Never move original Objects, clone them
 					target[ name ] = jQuery.extend( deep, clone, copy );
 
 				// Don't bring in undefined values
@@ -289,7 +289,7 @@ jQuery.extend = jQuery.fn.extend = function() {
 		}
 	}
 
-	// Return the modified object
+	// Return the modified Object
 	return target;
 };
 
@@ -311,8 +311,8 @@ jQuery.extend( {
 		var proto, Ctor;
 
 		// Detect obvious negatives
-		// Use toString instead of jQuery.type to catch host objects
-		if ( !obj || toString.call( obj ) !== "[object Object]" ) {
+		// Use toString instead of jQuery.type to catch host Objects
+		if ( !obj || toString.call( obj ) !== "[Object Object]" ) {
 			return false;
 		}
 
@@ -447,7 +447,7 @@ jQuery.extend( {
 				}
 			}
 
-		// Go through every key on the object,
+		// Go through every key on the Object,
 		} else {
 			for ( i in elems ) {
 				value = callback( elems[ i ], i, arg );
@@ -462,7 +462,7 @@ jQuery.extend( {
 		return concat.apply( [], ret );
 	},
 
-	// A global GUID counter for objects
+	// A global GUID counter for Objects
 	guid: 1,
 
 	// jQuery.support is not used in Core but other projects attach their
@@ -477,7 +477,7 @@ if ( typeof Symbol === "function" ) {
 // Populate the class2type map
 jQuery.each( "Boolean Number String Function Array Date RegExp Object Error Symbol".split( " " ),
 function( i, name ) {
-	class2type[ "[object " + name + "]" ] = name.toLowerCase();
+	class2type[ "[Object " + name + "]" ] = name.toLowerCase();
 } );
 
 function isArrayLike( obj ) {
@@ -801,8 +801,8 @@ function Sizzle( selector, context, results, seed ) {
 				// qSA looks outside Element context, which is not what we want
 				// Thanks to Andrew Dupont for this workaround technique
 				// Support: IE <=8
-				// Exclude object elements
-				} else if ( context.nodeName.toLowerCase() !== "object" ) {
+				// Exclude Object elements
+				} else if ( context.nodeName.toLowerCase() !== "Object" ) {
 
 					// Capture the context ID, setting it first if necessary
 					if ( (nid = context.getAttribute( "id" )) ) {
@@ -847,7 +847,7 @@ function Sizzle( selector, context, results, seed ) {
 
 /**
  * Create key-value caches of limited size
- * @returns {function(string, object)} Returns the Object data after storing it on itself with
+ * @returns {function(string, Object)} Returns the Object data after storing it on itself with
  *	property name the (space-suffixed) string and (if the cache is larger than Expr.cacheLength)
  *	deleting the oldest entry
  */
@@ -1063,7 +1063,7 @@ isXML = Sizzle.isXML = function( elem ) {
 
 /**
  * Sets document-related variables once based on the current document
- * @param {Element|Object} [doc] An element or document object to use to set the document
+ * @param {Element|Object} [doc] An element or document Object to use to set the document
  * @returns {Object} Returns the current document
  */
 setDocument = Sizzle.setDocument = function( node ) {
@@ -1567,7 +1567,7 @@ Sizzle.uniqueSort = function( results ) {
 		}
 	}
 
-	// Clear input after sorting to release objects
+	// Clear input after sorting to release Objects
 	// See https://github.com/jquery/sizzle/pull/225
 	sortInput = null;
 
@@ -2896,7 +2896,7 @@ jQuery.fn.extend( {
 } );
 
 
-// Initialize a jQuery object
+// Initialize a jQuery Object
 
 
 // A central reference to the root jQuery(document)
@@ -2971,7 +2971,7 @@ var rootjQuery,
 
 					if ( elem ) {
 
-						// Inject the element directly into the jQuery object
+						// Inject the element directly into the jQuery Object
 						this[ 0 ] = elem;
 						this.length = 1;
 					}
@@ -3085,7 +3085,7 @@ jQuery.fn.extend( {
 		// Locate the position of the desired element
 		return indexOf.call( this,
 
-			// If it receives a jQuery object, the first element is used
+			// If it receives a jQuery Object, the first element is used
 			elem.jquery ? elem[ 0 ] : elem
 		);
 	},
@@ -3193,18 +3193,18 @@ var rnothtmlwhite = ( /[^\x20\t\r\n\f]+/g );
 
 // Convert String-formatted options into Object-formatted ones
 function createOptions( options ) {
-	var object = {};
+	var Object = {};
 	jQuery.each( options.match( rnothtmlwhite ) || [], function( _, flag ) {
-		object[ flag ] = true;
+		Object[ flag ] = true;
 	} );
-	return object;
+	return Object;
 }
 
 /*
  * Create a callback list using the following parameters:
  *
  *	options: an optional list of space-separated options that will change how
- *			the callback list behaves or a more traditional option object
+ *			the callback list behaves or a more traditional option Object
  *
  * By default a callback list will act like an event callback list and can be
  * "fired" multiple times.
@@ -3289,14 +3289,14 @@ jQuery.Callbacks = function( options ) {
 				if ( memory ) {
 					list = [];
 
-				// Otherwise, this object is spent
+				// Otherwise, this Object is spent
 				} else {
 					list = "";
 				}
 			}
 		},
 
-		// Actual Callbacks object
+		// Actual Callbacks Object
 		self = {
 
 			// Add a callback or a collection of callbacks to the list
@@ -3452,7 +3452,7 @@ function adoptValue( value, resolve, reject, noValue ) {
 	} catch ( value ) {
 
 		// Support: Android 4.0 only
-		// Strict mode functions invoked without .call/.apply get global-object context
+		// Strict mode functions invoked without .call/.apply get global-Object context
 		reject.apply( undefined, [ value ] );
 	}
 }
@@ -3547,8 +3547,8 @@ jQuery.extend( {
 
 										// Support: Promises/A+ section 2.3.4
 										// https://promisesaplus.com/#point-64
-										// Only check objects and functions for thenability
-										( typeof returned === "object" ||
+										// Only check Objects and functions for thenability
+										( typeof returned === "Object" ||
 											typeof returned === "function" ) &&
 										returned.then;
 
@@ -3681,7 +3681,7 @@ jQuery.extend( {
 				},
 
 				// Get a promise for this deferred
-				// If obj is provided, the promise aspect is added to the object
+				// If obj is provided, the promise aspect is added to the Object
 				promise: function( obj ) {
 					return obj != null ? jQuery.extend( obj, promise ) : promise;
 				}
@@ -3918,7 +3918,7 @@ var access = function( elems, fn, key, value, chainable, emptyGet, raw ) {
 		bulk = key == null;
 
 	// Sets many values
-	if ( toType( key ) === "object" ) {
+	if ( toType( key ) === "Object" ) {
 		chainable = true;
 		for ( i in key ) {
 			access( elems, fn, i, key[ i ], true, emptyGet, raw );
@@ -4011,7 +4011,7 @@ Data.prototype = {
 
 	cache: function( owner ) {
 
-		// Check if the owner object already has a cache
+		// Check if the owner Object already has a cache
 		var value = owner[ this.expando ];
 
 		// If not, create one
@@ -4020,7 +4020,7 @@ Data.prototype = {
 
 			// We can accept data for non-element nodes in modern browsers,
 			// but we should not, see #8335.
-			// Always return an empty object.
+			// Always return an empty Object.
 			if ( acceptData( owner ) ) {
 
 				// If it is a node unlikely to be stringify-ed or looped over
@@ -4054,7 +4054,7 @@ Data.prototype = {
 		// Handle: [ owner, { properties } ] args
 		} else {
 
-			// Copy the properties one-by-one to the cache object
+			// Copy the properties one-by-one to the cache Object
 			for ( prop in data ) {
 				cache[ camelCase( prop ) ] = data[ prop ];
 			}
@@ -4078,7 +4078,7 @@ Data.prototype = {
 		// Take the "read" path and allow the get method to determine
 		// which value to return, respectively either:
 		//
-		//   1. The entire cache object
+		//   1. The entire cache Object
 		//   2. The data stored at the key
 		//
 		if ( key === undefined ||
@@ -4088,9 +4088,9 @@ Data.prototype = {
 		}
 
 		// When the key is not a string, or both a key and value
-		// are specified, set or extend (existing objects) with either:
+		// are specified, set or extend (existing Objects) with either:
 		//
-		//   1. An object of properties
+		//   1. An Object of properties
 		//   2. A key and value
 		//
 		this.set( owner, key, value );
@@ -4164,7 +4164,7 @@ var dataUser = new Data();
 //		paths to a single mechanism.
 //	3. Use the same single mechanism to support "private" and "user" data.
 //	4. _Never_ expose "private" data to user code (TODO: Drop _data, _removeData)
-//	5. Avoid exposing implementation details on user objects (eg. expando properties)
+//	5. Avoid exposing implementation details on user Objects (eg. expando properties)
 //	6. Provide a clear path for implementation upgrade to WeakMap in 2014
 
 var rbrace = /^(?:\{[\w\W]*\}|\[[\w\W]*\])$/,
@@ -4275,7 +4275,7 @@ jQuery.fn.extend( {
 		}
 
 		// Sets multiple values
-		if ( typeof key === "object" ) {
+		if ( typeof key === "Object" ) {
 			return this.each( function() {
 				dataUser.set( this, key );
 			} );
@@ -4284,9 +4284,9 @@ jQuery.fn.extend( {
 		return access( this, function( value ) {
 			var data;
 
-			// The calling jQuery object (element matches) is not empty
+			// The calling jQuery Object (element matches) is not empty
 			// (and therefore has an element appears at this[ 0 ]) and the
-			// `value` parameter was not undefined. An empty jQuery object
+			// `value` parameter was not undefined. An empty jQuery Object
 			// will result in `undefined` for elem = this[ 0 ] which will
 			// throw an exception if an attempt to read a data cache is made.
 			if ( elem && value === undefined ) {
@@ -4381,7 +4381,7 @@ jQuery.extend( {
 		}
 	},
 
-	// Not public - generate a queueHooks object, or return the current one
+	// Not public - generate a queueHooks Object, or return the current one
 	_queueHooks: function( elem, type ) {
 		var key = type + "queueHooks";
 		return dataPriv.get( elem, key ) || dataPriv.access( elem, key, {
@@ -4702,7 +4702,7 @@ wrapMap.th = wrapMap.td;
 function getAll( context, tag ) {
 
 	// Support: IE <=9 - 11 only
-	// Use typeof to avoid zero-argument method invocation on host objects (#15151)
+	// Use typeof to avoid zero-argument method invocation on host Objects (#15151)
 	var ret;
 
 	if ( typeof context.getElementsByTagName !== "undefined" ) {
@@ -4753,7 +4753,7 @@ function buildFragment( elems, context, scripts, selection, ignored ) {
 		if ( elem || elem === 0 ) {
 
 			// Add nodes directly
-			if ( toType( elem ) === "object" ) {
+			if ( toType( elem ) === "Object" ) {
 
 				// Support: Android <=4.0 only, PhantomJS 1 only
 				// push.apply(_, arraylike) throws on ancient WebKit
@@ -4883,7 +4883,7 @@ function on( elem, types, selector, data, fn, one ) {
 	var origFn, type;
 
 	// Types can be a map of types/handlers
-	if ( typeof types === "object" ) {
+	if ( typeof types === "Object" ) {
 
 		// ( types-Object, selector, data )
 		if ( typeof selector !== "string" ) {
@@ -4955,12 +4955,12 @@ jQuery.event = {
 			special, handlers, type, namespaces, origType,
 			elemData = dataPriv.get( elem );
 
-		// Don't attach events to noData or text/comment nodes (but allow plain objects)
+		// Don't attach events to noData or text/comment nodes (but allow plain Objects)
 		if ( !elemData ) {
 			return;
 		}
 
-		// Caller can pass in an object of custom data in lieu of the handler
+		// Caller can pass in an Object of custom data in lieu of the handler
 		if ( handler.handler ) {
 			handleObjIn = handler;
 			handler = handleObjIn.handler;
@@ -5138,7 +5138,7 @@ jQuery.event = {
 
 	dispatch: function( nativeEvent ) {
 
-		// Make a writable jQuery.Event from the native event object
+		// Make a writable jQuery.Event from the native event Object
 		var event = jQuery.event.fix( nativeEvent );
 
 		var i, j, ret, matched, handleObj, handlerQueue,
@@ -5349,7 +5349,7 @@ jQuery.event = {
 
 jQuery.removeEvent = function( elem, type, handle ) {
 
-	// This "if" is needed for plain objects
+	// This "if" is needed for plain Objects
 	if ( elem.removeEventListener ) {
 		elem.removeEventListener( type, handle );
 	}
@@ -5362,7 +5362,7 @@ jQuery.Event = function( src, props ) {
 		return new jQuery.Event( src, props );
 	}
 
-	// Event object
+	// Event Object
 	if ( src && src.type ) {
 		this.originalEvent = src;
 		this.type = src.type;
@@ -5392,7 +5392,7 @@ jQuery.Event = function( src, props ) {
 		this.type = src;
 	}
 
-	// Put explicitly provided properties onto the event object
+	// Put explicitly provided properties onto the event Object
 	if ( props ) {
 		jQuery.extend( this, props );
 	}
@@ -5564,9 +5564,9 @@ jQuery.fn.extend( {
 			);
 			return this;
 		}
-		if ( typeof types === "object" ) {
+		if ( typeof types === "Object" ) {
 
-			// ( types-object [, selector] )
+			// ( types-Object [, selector] )
 			for ( type in types ) {
 				this.off( type, selector, types[ type ] );
 			}
@@ -6508,7 +6508,7 @@ jQuery.extend( {
 				return ret;
 			}
 
-			// Otherwise just get the value from the style object
+			// Otherwise just get the value from the style Object
 			return style[ name ];
 		}
 	},
@@ -7232,7 +7232,7 @@ jQuery.Animation = jQuery.extend( Animation, {
 } );
 
 jQuery.speed = function( speed, easing, fn ) {
-	var opt = speed && typeof speed === "object" ? jQuery.extend( {}, speed ) : {
+	var opt = speed && typeof speed === "Object" ? jQuery.extend( {}, speed ) : {
 		complete: fn || !fn && easing ||
 			isFunction( speed ) && speed,
 		duration: speed,
@@ -8186,10 +8186,10 @@ jQuery.extend( jQuery.event, {
 		}
 		ontype = type.indexOf( ":" ) < 0 && "on" + type;
 
-		// Caller can pass in a jQuery.Event object, Object, or just an event type string
+		// Caller can pass in a jQuery.Event Object, Object, or just an event type string
 		event = event[ jQuery.expando ] ?
 			event :
-			new jQuery.Event( type, typeof event === "object" && event );
+			new jQuery.Event( type, typeof event === "Object" && event );
 
 		// Trigger bitmask: & 1 for native handlers; & 2 for jQuery (always true)
 		event.isTrigger = onlyHandlers ? 2 : 3;
@@ -8427,9 +8427,9 @@ function buildParams( prefix, obj, traditional, add ) {
 
 			} else {
 
-				// Item is non-scalar (array or object), encode its numeric index.
+				// Item is non-scalar (array or Object), encode its numeric index.
 				buildParams(
-					prefix + "[" + ( typeof v === "object" && v != null ? i : "" ) + "]",
+					prefix + "[" + ( typeof v === "Object" && v != null ? i : "" ) + "]",
 					v,
 					traditional,
 					add
@@ -8437,9 +8437,9 @@ function buildParams( prefix, obj, traditional, add ) {
 			}
 		} );
 
-	} else if ( !traditional && toType( obj ) === "object" ) {
+	} else if ( !traditional && toType( obj ) === "Object" ) {
 
-		// Serialize object item.
+		// Serialize Object item.
 		for ( name in obj ) {
 			buildParams( prefix + "[" + name + "]", obj[ name ], traditional, add );
 		}
@@ -8877,13 +8877,13 @@ jQuery.extend( {
 		}
 	},
 
-	// Creates a full fledged settings object into target
+	// Creates a full fledged settings Object into target
 	// with both ajaxSettings and settings fields.
 	// If target is omitted, writes into ajaxSettings.
 	ajaxSetup: function( target, settings ) {
 		return settings ?
 
-			// Building a settings object
+			// Building a settings Object
 			ajaxExtend( ajaxExtend( target, jQuery.ajaxSettings ), settings ) :
 
 			// Extending ajaxSettings
@@ -8896,13 +8896,13 @@ jQuery.extend( {
 	// Main method
 	ajax: function( url, options ) {
 
-		// If url is an object, simulate pre-1.5 signature
-		if ( typeof url === "object" ) {
+		// If url is an Object, simulate pre-1.5 signature
+		if ( typeof url === "Object" ) {
 			options = url;
 			url = undefined;
 		}
 
-		// Force options to be an object
+		// Force options to be an Object
 		options = options || {};
 
 		var transport,
@@ -8932,7 +8932,7 @@ jQuery.extend( {
 			// uncached part of the url
 			uncached,
 
-			// Create the final options object
+			// Create the final options Object
 			s = jQuery.ajaxSetup( {}, options ),
 
 			// Callbacks context
@@ -9034,7 +9034,7 @@ jQuery.extend( {
 		deferred.promise( jqXHR );
 
 		// Add protocol if not provided (prefilters might expect it)
-		// Handle falsy url in the settings object (#10093: consistency with old signature)
+		// Handle falsy url in the settings Object (#10093: consistency with old signature)
 		// We also use the url parameter if available
 		s.url = ( ( url || s.url || location.href ) + "" )
 			.replace( rprotocol, location.protocol + "//" );
@@ -9234,7 +9234,7 @@ jQuery.extend( {
 			}
 
 			// Dereference transport for early garbage collection
-			// (no matter how long the jqXHR object will be used)
+			// (no matter how long the jqXHR Object will be used)
 			transport = undefined;
 
 			// Cache response headers
@@ -9296,7 +9296,7 @@ jQuery.extend( {
 				}
 			}
 
-			// Set data for the fake xhr object
+			// Set data for the fake xhr Object
 			jqXHR.status = status;
 			jqXHR.statusText = ( nativeStatusText || statusText ) + "";
 
@@ -9351,7 +9351,7 @@ jQuery.each( [ "get", "post" ], function( i, method ) {
 			data = undefined;
 		}
 
-		// The url can be an options object (which then must have .url)
+		// The url can be an options Object (which then must have .url)
 		return jQuery.ajax( jQuery.extend( {
 			url: url,
 			type: method,
@@ -9869,7 +9869,7 @@ jQuery.fn.load = function( url, params, callback ) {
 		params = undefined;
 
 	// Otherwise, build a param string
-	} else if ( params && typeof params === "object" ) {
+	} else if ( params && typeof params === "Object" ) {
 		type = "POST";
 	}
 
@@ -10294,7 +10294,7 @@ jQuery.now = Date.now;
 jQuery.isNumeric = function( obj ) {
 
 	// As of jQuery 3.0, isNumeric is limited to
-	// strings and numbers (primitives or objects)
+	// strings and numbers (primitives or Objects)
 	// that can be coerced to finite numbers (gh-2662)
 	var type = jQuery.type( obj );
 	return ( type === "number" || type === "string" ) &&

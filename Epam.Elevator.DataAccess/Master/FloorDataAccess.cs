@@ -91,13 +91,15 @@ namespace Epam.Elevator.DataAccess.Master
                     SqlDataReader sqlDataReader = command.ExecuteReader();
                     while (sqlDataReader.Read())
                     {
-                        Floor floor = new Floor();
-                        floor.FloorId = (int)sqlDataReader["FloorId"];
-                        floor.FloorName = (String)sqlDataReader["FloorName"];
-                        floor.ModifiedByUserId = (int)sqlDataReader["ModifiedByUserId"];
-                        floor.ModifiedDate = (DateTime)sqlDataReader["ModifiedDate"];
-                        floor.CreatedByUserId = (int)sqlDataReader["CreateByUserId"];
-                        floor.CreatedDate = (DateTime)sqlDataReader["CreateDate"];
+                        Floor floor = new Floor
+                        {
+                            FloorId = Convert.ToInt32(sqlDataReader["FloorId"]),
+                            FloorName = Convert.ToString(sqlDataReader["FloorName"]),
+                            ModifiedByUserId = Convert.ToInt32(sqlDataReader["ModifiedByUserId"]),
+                            ModifiedDate = Convert.ToDateTime(sqlDataReader["ModifiedDate"]),
+                            CreatedByUserId = Convert.ToInt32(sqlDataReader["CreateByUserId"]),
+                            CreatedDate = Convert.ToDateTime(sqlDataReader["CreateDate"])
+                        };
                         floorList.Add(floor);
                     }
                 }
@@ -120,13 +122,15 @@ namespace Epam.Elevator.DataAccess.Master
                     SqlDataReader sqlDataReader = command.ExecuteReader();
                     while (sqlDataReader.Read())
                     {
-                        Floor floor = new Floor();
-                        floor.FloorId = (int)sqlDataReader["FloorId"];
-                        floor.FloorName = (String)sqlDataReader["FloorName"];
-                        floor.ModifiedByUserId = (int)sqlDataReader["ModifiedByUserId"];
-                        floor.ModifiedDate = (DateTime)sqlDataReader["ModifiedDate"];
-                        floor.CreatedByUserId = (int)sqlDataReader["CreateByUserId"];
-                        floor.CreatedDate = (DateTime)sqlDataReader["CreateDate"];
+                        Floor floor = new Floor
+                        {
+                            FloorId = Convert.ToInt32(sqlDataReader["FloorId"]),
+                            FloorName = Convert.ToString(sqlDataReader["FloorName"]),
+                            ModifiedByUserId = Convert.ToInt32(sqlDataReader["ModifiedByUserId"]),
+                            ModifiedDate = Convert.ToDateTime(sqlDataReader["ModifiedDate"]),
+                            CreatedByUserId = Convert.ToInt32(sqlDataReader["CreateByUserId"]),
+                            CreatedDate = Convert.ToDateTime(sqlDataReader["CreateDate"])
+                        };
                         floorList.Add(floor);
                     }
                 }

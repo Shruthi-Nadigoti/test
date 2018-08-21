@@ -1,4 +1,4 @@
-﻿@model Epam.Elevator.Models.Master.Elevator
+﻿@model Epam.Elevator.Presentation.Master.ElevatorModel
 
 @{
     ViewBag.Title = "Create";
@@ -41,10 +41,10 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.MainStatusId, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.MainStatus, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.MainStatusId, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.MainStatusId, "", new { @class = "text-danger" })
+                @Html.EditorFor(model => model.MainStatus, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.MainStatus, "", new { @class = "text-danger" })
             </div>
         </div>
 

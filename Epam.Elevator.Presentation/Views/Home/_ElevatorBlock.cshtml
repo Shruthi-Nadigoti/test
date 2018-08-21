@@ -1,16 +1,17 @@
-﻿@model Epam.Elevator.Models.Master.User
+﻿@model Epam.Elevator.Models.Master.Elevator
 @using Epam.Elevator.Models
 
 <div class="lifts floatleft">
-    Selected Lift floors: <div id=>
-        <div style="border-style:solid;border-width:thin;border-color:white;"> 1 3 4</div>
+        <h4> @Html.DisplayFor(model => model.ElevatorName)</h4>
+        <div>Selected Floors: 1 2 3</div>
+        <div style="border-style:solid;border-width:thin;border-color:white;"> (come from transaction)</div>
         <div style="margin-top:70px">
-            Alarm : Status
-            Status: @ViewBag.Status
+            Alarm : transaction
+            MainStatus:  @Html.DisplayFor(model => model.MainStatus)
             <br />
-                
+
             <br />
-            Time: 
+            Time:
         </div>
     </div>
 </div>
