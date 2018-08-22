@@ -10,25 +10,25 @@
         foreach (var liftItem in ViewBag.elevatorList)
         {
             @liftItem;
-            //Html.RenderPartial("_ElevatorBlock", liftItem);
+            Html.Partial("_ElevatorBlock", liftItem);
         }
     }
 </div>
 <div class="floatleft" style="height:200px;width:200px;border-width:10px; margin-left: 200px;margin-top:50px;">
     Enter current floor: <select>
         @{
-            foreach (var liftItem in ViewBag.FloorList)
+            foreach (var floorItem in ViewBag.FloorList)
             {
-                <option value=@liftItem>@liftItem</option>
+                <option value=@floorItem.FloorName>@floorItem.FloorName</option>
             }
         }
     </select>
     <br /><br /><br />
     @{
-        foreach (var liftItem in ViewBag.FloorList)
+        foreach (var floorItem in ViewBag.FloorList)
         {
-            if(!Char.IsNumber(liftItem) || liftItem<10){
-                <button type="button" class="keypad">@liftItem</button>
+            if(!Char.IsNumber(floorItem) || floorItem<10){
+                <button type="button" class="keypad">@floorItem.FloorName</button>
             }
         }
     }
