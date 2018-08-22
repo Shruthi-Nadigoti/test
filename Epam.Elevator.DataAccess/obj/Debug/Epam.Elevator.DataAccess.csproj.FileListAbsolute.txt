@@ -43,3 +43,12 @@ C:\Users\SURATHI\Videos\Elevator\test\Epam.Elevator.DataAccess\obj\Debug\Epam.El
 C:\Users\SURATHI\Videos\Elevator\test\Epam.Elevator.DataAccess\obj\Debug\Epam.Elevator.DataAccess.csproj.CopyComplete
 C:\Users\SURATHI\Videos\Elevator\test\Epam.Elevator.DataAccess\obj\Debug\Epam.Elevator.DataAccess.dll
 C:\Users\SURATHI\Videos\Elevator\test\Epam.Elevator.DataAccess\obj\Debug\Epam.Elevator.DataAccess.pdb
+C:\Users\Shruthi_Nadigoti\source\repos\ElevatorProjectSolution\test\Epam.Elevator.DataAccess\bin\Debug\Epam.Elevator.DataAccess.dll
+C:\Users\Shruthi_Nadigoti\source\repos\ElevatorProjectSolution\test\Epam.Elevator.DataAccess\bin\Debug\Epam.Elevator.DataAccess.pdb
+C:\Users\Shruthi_Nadigoti\source\repos\ElevatorProjectSolution\test\Epam.Elevator.DataAccess\bin\Debug\Epam.Elevator.Models.dll
+C:\Users\Shruthi_Nadigoti\source\repos\ElevatorProjectSolution\test\Epam.Elevator.DataAccess\bin\Debug\Epam.Elevator.Models.pdb
+C:\Users\Shruthi_Nadigoti\source\repos\ElevatorProjectSolution\test\Epam.Elevator.DataAccess\obj\Debug\Epam.Elevator.DataAccess.csprojAssemblyReference.cache
+C:\Users\Shruthi_Nadigoti\source\repos\ElevatorProjectSolution\test\Epam.Elevator.DataAccess\obj\Debug\Epam.Elevator.DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\Shruthi_Nadigoti\source\repos\ElevatorProjectSolution\test\Epam.Elevator.DataAccess\obj\Debug\Epam.Elevator.DataAccess.csproj.CopyComplete
+C:\Users\Shruthi_Nadigoti\source\repos\ElevatorProjectSolution\test\Epam.Elevator.DataAccess\obj\Debug\Epam.Elevator.DataAccess.dll
+C:\Users\Shruthi_Nadigoti\source\repos\ElevatorProjectSolution\test\Epam.Elevator.DataAccess\obj\Debug\Epam.Elevator.DataAccess.pdb

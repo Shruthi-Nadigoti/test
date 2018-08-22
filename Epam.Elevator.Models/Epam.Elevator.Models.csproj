@@ -42,7 +42,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Master\Elevator.cs" />
-    <Compile Include="Enums.cs" />
     <Compile Include="Master\Floor.cs" />
     <Compile Include="Master\Lookup.cs" />
     <Compile Include="Master\User.cs" />

@@ -1,0 +1,1 @@
+﻿select LookupValue from MasterLookup where LookupId=1

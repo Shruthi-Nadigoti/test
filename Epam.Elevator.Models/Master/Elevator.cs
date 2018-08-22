@@ -11,7 +11,7 @@ namespace Epam.Elevator.Models.Master
         public Int32 ElevatorId { get; set; }
         public String ElevatorName { get; set; }
         public Int32 MaxWeight { get; set; }
-        public TimeSpan FloorDuration { get; set; }
+        public Int32 FloorDuration { get; set; }
         public Int32 MainStatusId { get; set; }
         public Int32 CreatedByUserId { get; set; }
         public DateTime CreatedDate { get; set; }

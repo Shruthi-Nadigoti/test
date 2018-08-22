@@ -45,7 +45,8 @@ namespace Epam.Elevator.Business.Master
 
         public string GetLookupValue(int id)
         {
-            throw new NotImplementedException();
+            String lookupValue = lookupDataAccess.GetLookupValue(id);
+            return lookupValue;
         }
     }
 }

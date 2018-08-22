@@ -9,7 +9,8 @@
     @{
         foreach (var liftItem in ViewBag.elevatorList)
         {
-            Html.RenderPartial("_ElevatorBlock", liftItem);
+            @liftItem;
+            //Html.RenderPartial("_ElevatorBlock", liftItem);
         }
     }
 </div>

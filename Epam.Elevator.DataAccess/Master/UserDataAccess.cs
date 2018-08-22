@@ -12,7 +12,7 @@ namespace Epam.Elevator.DataAccess.Master
 {
     public class UserDataAccess : IUserDataAccess
     {
-        LookupDataAccess lookupDataAccess = new LookupDataAccess();
+      
         private readonly String connectionString = ConfigurationManager.ConnectionStrings["DBCS"].ConnectionString;
         public bool Create(User user)
         {
@@ -51,7 +51,6 @@ namespace Epam.Elevator.DataAccess.Master
             bool result = false;
             //try
             //{
-            int GenderIdLookupId = lookupDataAccess.GetLookupId("GenderId", user.GenderId.ToString());
             using (SqlConnection sqlConnection = new SqlConnection(connectionString))
             {
                 SqlCommand command = new SqlCommand("UPDATE MasterUsers SET FirstName = @firstName, LastName = @lastName," +

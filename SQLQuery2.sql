@@ -1,0 +1,1 @@
+﻿SELECT ElevatorId, ElevatorName,MaxWeight,FloorDuration,MainStatusId,CreatedByUserId,CreateDate,ModifiedByUserId,ModifiedDate FROM MasterElevator

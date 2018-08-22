@@ -97,7 +97,7 @@ namespace Epam.Elevator.DataAccess.Master
                             FloorName = Convert.ToString(sqlDataReader["FloorName"]),
                             ModifiedByUserId = Convert.ToInt32(sqlDataReader["ModifiedByUserId"]),
                             ModifiedDate = Convert.ToDateTime(sqlDataReader["ModifiedDate"]),
-                            CreatedByUserId = Convert.ToInt32(sqlDataReader["CreateByUserId"]),
+                            CreatedByUserId = Convert.ToInt32(sqlDataReader["CreatedByUserId"]),
                             CreatedDate = Convert.ToDateTime(sqlDataReader["CreateDate"])
                         };
                         floorList.Add(floor);

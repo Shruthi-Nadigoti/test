@@ -24,42 +24,42 @@ namespace Epam.Elevator.DataAccess.Master
         public int GetLookupId(String key,String value)
         {
             int id = -1;
-            try
-            {
+            //try
+            //{
                 
                 using (SqlConnection sqlConnection = new SqlConnection(connectionString))
                 {
-                    SqlCommand command = new SqlCommand("select id from MasterLookup where Key=@key and Value=@value");
+                    SqlCommand command = new SqlCommand("select LookupId from MasterLookup where LookupKey=@key and LookupValue=@value",sqlConnection);
                     command.Parameters.AddWithValue("@key", key);
                     command.Parameters.AddWithValue("@value", value);
                     sqlConnection.Open();
                     id = (int)command.ExecuteScalar();
                 }
-            }
-            catch
-            {
-            }
+            //}
+            //catch
+            //{
+            //}
             return id;
             
         }
         public String GetLookupValue(int id)
         {
             String result = String.Empty; 
-            try
-            {
+            //try
+            //{
                 using (SqlConnection sqlConnection = new SqlConnection(connectionString))
                 {
-                    SqlCommand command = new SqlCommand("select id from MasterLookup where Key=@key and LookupId=@id");
+                    SqlCommand command = new SqlCommand("select LookupValue from MasterLookup where LookupId=@id",sqlConnection);
                     command.Parameters.AddWithValue("@id", id);
                     sqlConnection.Open();
-                    result= (String)command.ExecuteScalar();
+                     result= (String)command.ExecuteScalar();
                 }
              
-            }
-            catch
-            {
+            //}
+            //catch
+            //{
                
-            }
+            //}
             return result;
 
         }
@@ -68,7 +68,7 @@ namespace Epam.Elevator.DataAccess.Master
             try
             {
                 SqlConnection sqlConnection = new SqlConnection(connectionString);
-                SqlCommand command = new SqlCommand("select id from MasterLookup where key=");
+                SqlCommand command = new SqlCommand("select id from MasterLookup where Lookupkey=");
 
             }
             catch

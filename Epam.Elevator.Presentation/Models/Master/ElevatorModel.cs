@@ -17,7 +17,7 @@ namespace Epam.Elevator.Presentation.Master
         [Required]
         public Int32 MaxWeight { get; set; }
         [Required]
-        public TimeSpan FloorDuration { get; set; }
+        public Int32 FloorDuration { get; set; }
         [Required]
         public Enums.MainStatus MainStatus { get; set; }
         public Int32 CreatedByUserId { get; set; }

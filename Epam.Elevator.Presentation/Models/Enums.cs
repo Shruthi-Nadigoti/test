@@ -12,8 +12,7 @@ namespace Epam.Elevator.Presentation
         {
             Male,
             Female,
-            Other,
-            Unknown
+            Other
         }
         public enum MainStatus
         {
