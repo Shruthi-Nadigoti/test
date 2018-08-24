@@ -16,7 +16,7 @@ namespace Epam.Elevator.Presentation
         }
         public enum MainStatus
         {
-            Block,
+            Blocked,
             Active
         }
     }

@@ -5,7 +5,8 @@ using System.Web;
 using System.Web.Mvc;
 using Epam.Elevator.DataAccess.Master;
 using Epam.Elevator.Business.Master;
-using ElevatorModel = Epam.Elevator.Models.Master;
+using ElevatorCoreModel = Epam.Elevator.Models.Master;
+using Epam.Elevator.Presentation.Master;
 namespace Epam.Elevator.Presentation.Controllers
 {
     public class ElevatorController : Controller
@@ -20,7 +21,9 @@ namespace Epam.Elevator.Presentation.Controllers
         public ActionResult Details()
         {
             ElevatorBusiness elevatorBusiness = new ElevatorBusiness(new ElevatorDataAccess());
-            List<ElevatorModel.Elevator> elevatorList = elevatorBusiness.GetElevators();
+            List<ElevatorCoreModel.Elevator> elevatorList = elevatorBusiness.GetElevators();
+          
+
             return View(elevatorList);
         }
 
@@ -37,7 +40,7 @@ namespace Epam.Elevator.Presentation.Controllers
             try
             {
                 ElevatorBusiness elevatorBusiness = new ElevatorBusiness(new ElevatorDataAccess());
-                ElevatorModel.Elevator elevator = new ElevatorModel.Elevator();
+                ElevatorCoreModel.Elevator elevator = new ElevatorCoreModel.Elevator();
                 // string iString = "2005-05-05 22:12 PM";
                 // DateTime oDate = DateTime.ParseExact(iString, "yyyy-MM-dd HH:mm tt", null);
                 elevatorBusiness.Create(elevator);
@@ -63,7 +66,7 @@ namespace Epam.Elevator.Presentation.Controllers
             {
                 // TODO: Add update logic here
                 ElevatorBusiness elevatorBusiness = new ElevatorBusiness(new ElevatorDataAccess());
-                ElevatorModel.Elevator elevator = new ElevatorModel.Elevator();
+                ElevatorCoreModel.Elevator elevator = new ElevatorCoreModel.Elevator();
                 // string iString = "2005-05-05 22:12 PM";
                 // DateTime oDate = DateTime.ParseExact(iString, "yyyy-MM-dd HH:mm tt", null);
                 elevatorBusiness.Update(elevator);
@@ -89,7 +92,7 @@ namespace Epam.Elevator.Presentation.Controllers
             {
                 // TODO: Add delete logic here
                 ElevatorBusiness elevatorBusiness = new ElevatorBusiness(new ElevatorDataAccess());
-                ElevatorModel.Elevator elevator = new ElevatorModel.Elevator();
+                ElevatorCoreModel.Elevator elevator = new ElevatorCoreModel.Elevator();
                 // string iString = "2005-05-05 22:12 PM";
                 // DateTime oDate = DateTime.ParseExact(iString, "yyyy-MM-dd HH:mm tt", null);
                 elevatorBusiness.Delete(elevator.ElevatorId);

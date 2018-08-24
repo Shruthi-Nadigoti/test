@@ -3,19 +3,20 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 @Styles.Render("~/Content/Custom/Elevator")
+@using Epam.Elevator.Presentation.Master;
 
 <h2>Home</h2>
 <div style="width:1000px;height:500px">
     @{
-        foreach (var liftItem in ViewBag.elevatorList)
+        foreach (ElevatorModel elevatorItem in ViewBag.elevatorList)
         {
-            @liftItem;
-            Html.Partial("_ElevatorBlock", liftItem);
+            Html.RenderPartial("_ElevatorBlock", elevatorItem);
+            // @Html.Action("DisplayElevatorBlock", elevatorItem);
         }
     }
 </div>
 <div class="floatleft" style="height:200px;width:200px;border-width:10px; margin-left: 200px;margin-top:50px;">
-    Enter current floor: <select>
+    <span>Enter current floor:</span><select>
         @{
             foreach (var floorItem in ViewBag.FloorList)
             {
@@ -27,14 +28,18 @@
     @{
         foreach (var floorItem in ViewBag.FloorList)
         {
-            if(!Char.IsNumber(floorItem) || floorItem<10){
+            int number; ;
+            bool isNumber = Int32.TryParse(floorItem.FloorName, out number);
+
+            if (!isNumber || number < 10)
+            {
                 <button type="button" class="keypad">@floorItem.FloorName</button>
             }
         }
     }
 </div>
 <div class="output">
-    Assigned lift is:@ViewBag.assignedLiftName
+    Assigned lift is:
 </div>
 <div style="clear:both;">
 </div>
