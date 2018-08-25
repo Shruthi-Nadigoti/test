@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Configuration;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -20,7 +21,10 @@ namespace Epam.Elevator.DataAccess.Master
             // {
             using (SqlConnection sqlConnection = new SqlConnection(connectionString))
             {
-                SqlCommand command = new SqlCommand("INSERT INTO MasterFloors(FloorName,CreatedByUserId,CreateDate,ModifiedByUserId,ModifiedDate)values(@floorName,@createdByUserId,@createDate,@modifiedByUserId,@modifiedDate)", sqlConnection);
+                SqlCommand command = new SqlCommand("CreateFloor", sqlConnection)
+                {
+                    CommandType = CommandType.StoredProcedure
+                };
                 command.Parameters.AddWithValue("@floorName", floor.FloorName);
                 command.Parameters.AddWithValue("@createByUserId", floor.CreatedByUserId);
                 command.Parameters.AddWithValue("@createDate", floor.CreatedDate);
@@ -46,7 +50,10 @@ namespace Epam.Elevator.DataAccess.Master
             {
                 using (SqlConnection sqlConnection = new SqlConnection(connectionString))
                 {
-                    SqlCommand command = new SqlCommand("UPDATE MasterFloors SET FloorName = @firstName where FloorId=@floorId)", sqlConnection);
+                    SqlCommand command = new SqlCommand("UpdateFloor", sqlConnection)
+                    {
+                        CommandType = CommandType.StoredProcedure
+                    };
                     command.Parameters.AddWithValue("@floorId", floorId);
                     sqlConnection.Open();
                     result = command.ExecuteNonQuery() > 0 ? true : false;
@@ -67,7 +74,10 @@ namespace Epam.Elevator.DataAccess.Master
             {
                 using (SqlConnection sqlConnection = new SqlConnection(connectionString))
                 {
-                    SqlCommand command = new SqlCommand("DELETE FROM MasterFloors WHERE FloorId = @floorId", sqlConnection);
+                    SqlCommand command = new SqlCommand("DeleteFloor", sqlConnection)
+                    {
+                        CommandType = CommandType.StoredProcedure
+                    };
                     command.Parameters.AddWithValue("@floorId", floorId);
                     sqlConnection.Open();
                     result = command.ExecuteNonQuery() > 0 ? true : false;
@@ -86,7 +96,10 @@ namespace Epam.Elevator.DataAccess.Master
             {
                 using (SqlConnection sqlConnection = new SqlConnection(connectionString))
                 {
-                    SqlCommand command = new SqlCommand("SELECT FloorId,FloorName,CreatedByUserId,CreateDate,ModifiedByUserId,ModifiedDate FROM MasterFloors", sqlConnection);
+                    SqlCommand command = new SqlCommand("GetFloors", sqlConnection)
+                    {
+                        CommandType = CommandType.StoredProcedure
+                    };
                     sqlConnection.Open();
                     SqlDataReader sqlDataReader = command.ExecuteReader();
                     while (sqlDataReader.Read())
@@ -116,7 +129,10 @@ namespace Epam.Elevator.DataAccess.Master
             {
                 using (SqlConnection sqlConnection = new SqlConnection(connectionString))
                 {
-                    SqlCommand command = new SqlCommand("SELECT FloorId,FloorName,CreatedByUserId,CreateDate,ModifiedByUserId,ModifiedDate FROM MasterFloors WHERE FloorName=@searchString ", sqlConnection);
+                    SqlCommand command = new SqlCommand("SearchFloors", sqlConnection)
+                    {
+                        CommandType = CommandType.StoredProcedure
+                    };
                     command.Parameters.AddWithValue("@searchString", "%" + searchString + "%");
                     sqlConnection.Open();
                     SqlDataReader sqlDataReader = command.ExecuteReader();

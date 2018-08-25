@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Configuration;
+using System.Data;
 using System.Data.SqlClient;
 using Epam.Elevator.DataAccess.Master.Interfaces;
 using ElevatorModel = Epam.Elevator.Models.Master;
@@ -17,12 +18,15 @@ namespace Epam.Elevator.DataAccess.Master
             // {
             using (SqlConnection sqlConnection = new SqlConnection(connectionString))
             {
-                SqlCommand command = new SqlCommand("INSERT INTO MasterElevator(ElevatorName,MaxWeight,FloorDuration,MainStatusId,CreatedByUserId,CreateDate,ModifiedByUserId,ModifiedDate)values(@elevatorName,@maxWeight,@floorDuration,@mainStatusId,@createdByUserId,@createDate,@modifiedByUserId,@modifiedDate)", sqlConnection);
+                SqlCommand command = new SqlCommand("CreateElevator", sqlConnection)
+                {
+                    CommandType = CommandType.StoredProcedure
+                };
                 command.Parameters.AddWithValue("@elevatorName", elevator.ElevatorName);
                 command.Parameters.AddWithValue("@floorDuration", elevator.FloorDuration);
                 command.Parameters.AddWithValue("@maxWeight", elevator.MaxWeight);
                 command.Parameters.AddWithValue("@mainStatusId", elevator.MainStatusId);
-                command.Parameters.AddWithValue("@createByUserId",elevator.CreatedByUserId);
+                command.Parameters.AddWithValue("@createByUserId", elevator.CreatedByUserId);
                 command.Parameters.AddWithValue("@createDate", elevator.CreatedDate);
                 command.Parameters.AddWithValue("@modifiedUserId", elevator.ModifiedByUserId);
                 command.Parameters.AddWithValue("@modifiedDate", elevator.ModifiedDate);
@@ -33,8 +37,6 @@ namespace Epam.Elevator.DataAccess.Master
             // }
             // catch(Exception e)
             // {
-            //e.printStackTrace();
-            //     e.StackTrace;
             // }
             return result;
 
@@ -46,7 +48,10 @@ namespace Epam.Elevator.DataAccess.Master
             {
                 using (SqlConnection sqlConnection = new SqlConnection(connectionString))
                 {
-                    SqlCommand command = new SqlCommand("UPDATE MasterElevator SET ElevatorName = @elevatorName, FloorDuration=@floorDuration, MaxWeight=@maxWeight, MainStatusId= @mainStatusId where ElevatorId=@elevatorId)", sqlConnection);
+                    SqlCommand command = new SqlCommand("UpdateElevator", sqlConnection)
+                    {
+                        CommandType = CommandType.StoredProcedure
+                    };
                     command.Parameters.AddWithValue("@elevatorName", elevator.ElevatorName);
                     command.Parameters.AddWithValue("@floorDuration", elevator.FloorDuration);
                     command.Parameters.AddWithValue("@maxWeight", elevator.MaxWeight);
@@ -70,7 +75,11 @@ namespace Epam.Elevator.DataAccess.Master
             {
                 using (SqlConnection sqlConnection = new SqlConnection(connectionString))
                 {
-                    SqlCommand command = new SqlCommand("DELETE FROM MasterElevators WHERE ElevatorId = @elevatorId", sqlConnection);
+                    SqlCommand command = new SqlCommand("DeleteElevator", sqlConnection)
+                    {
+                        CommandType = CommandType.StoredProcedure
+                    };
+
                     command.Parameters.AddWithValue("@elevatorId", elevatorId);
                     sqlConnection.Open();
                     result = command.ExecuteNonQuery() > 0 ? true : false;
@@ -87,28 +96,36 @@ namespace Epam.Elevator.DataAccess.Master
             List<ElevatorModel.Elevator> elevatorList = new List<ElevatorModel.Elevator>();
             //try
             //{
-                using (SqlConnection sqlConnection = new SqlConnection(connectionString))
+            using (SqlConnection sqlConnection = new SqlConnection(connectionString))
+            {
+                SqlCommand command = new SqlCommand("GetElevators", sqlConnection)
                 {
-                    SqlCommand command = new SqlCommand("SELECT ElevatorId, ElevatorName,MaxWeight,FloorDuration,MainStatusId,CreatedByUserId,CreateDate,ModifiedByUserId,ModifiedDate FROM MasterElevator", sqlConnection);
-                    sqlConnection.Open();
-                    SqlDataReader sqlDataReader = command.ExecuteReader();
-                    while (sqlDataReader.Read())
+                    CommandType = CommandType.StoredProcedure
+                };
+                SqlDataAdapter adapter = new SqlDataAdapter
+                {
+                    SelectCommand = command
+                };
+                DataSet dataSet = new DataSet();
+                adapter.Fill(dataSet, "Elevators");
+                foreach (DataRow row in dataSet.Tables["Elevators"].Rows)
+                {
+                    ElevatorModel.Elevator elevator = new ElevatorModel.Elevator
                     {
-                    ElevatorModel.Elevator elevator = new ElevatorModel.Elevator();
+                        ElevatorId = Convert.ToInt32(row["ElevatorId"]),
+                        ElevatorName = Convert.ToString(row["ElevatorName"]),
+                        FloorDuration = Convert.ToInt32(row["FloorDuration"]),
+                        MainStatusId = Convert.ToInt32(row["MainStatusId"]),
+                        MaxWeight = Convert.ToInt32(row["MaxWeight"]),
+                        ModifiedByUserId = Convert.ToInt32(row["ModifiedByUserId"]),
+                        ModifiedDate = Convert.ToDateTime(row["ModifiedDate"]),
+                        CreatedByUserId = Convert.ToInt32(row["CreatedByUserId"]),
+                        CreatedDate = Convert.ToDateTime(row["CreateDate"])
+                    };
 
-                    elevator.ElevatorId = Convert.ToInt32(sqlDataReader["ElevatorId"]);
-                    elevator.ElevatorName = Convert.ToString(sqlDataReader["ElevatorName"]);
-                    elevator.FloorDuration = Convert.ToInt32(sqlDataReader["FloorDuration"]);
-                    elevator.MainStatusId = Convert.ToInt32(sqlDataReader["MainStatusId"]);
-                    elevator.MaxWeight = Convert.ToInt32(sqlDataReader["MaxWeight"]);
-                    elevator.ModifiedByUserId = Convert.ToInt32(sqlDataReader["ModifiedByUserId"]);
-                    elevator.ModifiedDate = Convert.ToDateTime(sqlDataReader["ModifiedDate"]);
-                    elevator.CreatedByUserId = Convert.ToInt32(sqlDataReader["CreatedByUserId"]);
-                    elevator.CreatedDate = Convert.ToDateTime(sqlDataReader["CreateDate"]);
-                        
-                        elevatorList.Add(elevator);
-                    }
+                    elevatorList.Add(elevator);
                 }
+            }
             //}
             //catch
             //{
@@ -122,23 +139,28 @@ namespace Epam.Elevator.DataAccess.Master
             {
                 using (SqlConnection sqlConnection = new SqlConnection(connectionString))
                 {
-                    SqlCommand command = new SqlCommand("SELECT ElevatorId, ElevatorName,MaxWeight,FloorDuration,MainStatusId,CreatedByUserId,CreateDate,ModifiedByUserId,ModifiedDate FROM MasterElevators WHERE FloorName=@searchString or FloorDuration=@searchString or MaxWeight=@searchString or MainStatusId=@searchString ", sqlConnection);
+                    SqlCommand command = new SqlCommand("SearchElevators", sqlConnection)
+                    {
+                        CommandType = CommandType.StoredProcedure
+                    };
                     command.Parameters.AddWithValue("@searchString", "%" + searchString + "%");
-                    sqlConnection.Open();
-                    SqlDataReader sqlDataReader = command.ExecuteReader();
-                    while (sqlDataReader.Read())
+                    SqlDataAdapter adapter = new SqlDataAdapter();
+                    adapter.SelectCommand = command;
+                    DataSet dataSet = new DataSet();
+                    adapter.Fill(dataSet, "Elevators");
+                    foreach (DataRow row in dataSet.Tables["Elevators"].Rows)
                     {
                         ElevatorModel.Elevator elevator = new ElevatorModel.Elevator
                         {
-                            ElevatorId = Convert.ToInt32(sqlDataReader["ElevatorId"]),
-                            ElevatorName = Convert.ToString(sqlDataReader["ElevatorName"]),
-                            FloorDuration = Convert.ToInt32(sqlDataReader["FloorDuration"]),
-                            MainStatusId = Convert.ToInt32(sqlDataReader["MainStatusId"]),
-                            MaxWeight = Convert.ToInt32(sqlDataReader["MaxWeight"]),
-                            ModifiedByUserId = Convert.ToInt32(sqlDataReader["ModifiedByUserId"]),
-                            ModifiedDate = Convert.ToDateTime(sqlDataReader["ModifiedDate"]),
-                            CreatedByUserId = Convert.ToInt32(sqlDataReader["CreateByUserId"]),
-                            CreatedDate = Convert.ToDateTime(sqlDataReader["CreateDate"])
+                            ElevatorId = Convert.ToInt32(row["ElevatorId"]),
+                            ElevatorName = Convert.ToString(row["ElevatorName"]),
+                            FloorDuration = Convert.ToInt32(row["FloorDuration"]),
+                            MainStatusId = Convert.ToInt32(row["MainStatusId"]),
+                            MaxWeight = Convert.ToInt32(row["MaxWeight"]),
+                            ModifiedByUserId = Convert.ToInt32(row["ModifiedByUserId"]),
+                            ModifiedDate = Convert.ToDateTime(row["ModifiedDate"]),
+                            CreatedByUserId = Convert.ToInt32(row["CreateByUserId"]),
+                            CreatedDate = Convert.ToDateTime(row["CreateDate"])
                         };
                         elevatorList.Add(elevator);
                     }
@@ -150,6 +172,6 @@ namespace Epam.Elevator.DataAccess.Master
             return elevatorList;
         }
 
-       
+
     }
 }

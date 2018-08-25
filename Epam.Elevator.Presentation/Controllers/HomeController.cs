@@ -53,7 +53,11 @@ namespace Epam.Elevator.Presentation.Controllers
             ViewBag.floorList = floorModelList;
             return View();
         }
-
+        [ChildActionOnly]
+        public ActionResult DisplayElevatoBlock(ElevatorModel elevatorModel)
+        {
+            return PartialView("_ElevatorBlock",elevatorModel);
+        }
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";

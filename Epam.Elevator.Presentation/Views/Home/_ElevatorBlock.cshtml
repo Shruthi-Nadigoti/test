@@ -2,15 +2,14 @@
 
 <div class="lifts floatleft">
         <h4> @Html.DisplayFor(model => model.ElevatorName)</h4>
-        <div>Selected Floors: 1 2 3</div>
+        <div>Selected Floors: </div>
         <div style="border-style:solid;border-width:thin;border-color:white;"> (come from transaction)</div>
         <div style="margin-top:70px">
-            Alarm : transaction
+            Alarm : come transaction
             MainStatus:  @Html.DisplayFor(model => model.MainStatus)
             <br />
                 
             <br />
-            Time:
+            Time: @DateTime.Now
         </div>
     </div>
-</div>
