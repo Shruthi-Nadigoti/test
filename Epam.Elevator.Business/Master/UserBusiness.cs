@@ -1,11 +1,7 @@
-﻿using Epam.Elevator.DataAccess.Master;
-using Epam.Elevator.Models.Master;
+﻿using Epam.Elevator.Models.Master;
 using Epam.Elevator.DataAccess.Master.Interfaces;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Epam.Elevator.Business.Master
 {
@@ -17,11 +13,15 @@ namespace Epam.Elevator.Business.Master
         {
             this.userDataAccess = userDataAccess;
         }
-        public  bool Update(User user)
+        public bool Update(User user)
         {
-
             bool result = userDataAccess.Update(user);
             return result;
+        }
+        public User IsValidUser(String emailId,String password)
+        {
+            User user= userDataAccess.IsValidUser(emailId,password);
+            return user;
         }
         public User Get(int userId)
         {

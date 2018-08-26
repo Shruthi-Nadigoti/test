@@ -1,11 +1,7 @@
-﻿using Epam.Elevator.DataAccess.Master;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using ElevatorModel=Epam.Elevator.Models.Master;
+﻿using System.Collections.Generic;
+using ElevatorModel = Epam.Elevator.Models.Master;
 using Epam.Elevator.DataAccess.Master.Interfaces;
+
 namespace Epam.Elevator.Business.Master
 {
     public class ElevatorBusiness 
@@ -26,7 +22,11 @@ namespace Epam.Elevator.Business.Master
             bool result = elevatorDataAccess.Update(elevator);
             return result;
         }
-
+        public ElevatorModel.Elevator GetElevator(int elevatorId)
+        {
+            ElevatorModel.Elevator elevator = elevatorDataAccess.GetElevator(elevatorId);
+            return elevator;
+        }
         public bool Delete(int elevatorId)
         {
             bool result = elevatorDataAccess.Delete(elevatorId);

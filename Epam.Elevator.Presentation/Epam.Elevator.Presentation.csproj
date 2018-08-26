@@ -150,11 +150,13 @@
     <Compile Include="Controllers\ElevatorController.cs" />
     <Compile Include="Controllers\FloorController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LogInController.cs" />
     <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Enums.cs" />
+    <Compile Include="Models\LogInModel.cs" />
     <Compile Include="Models\Master\ElevatorModel.cs" />
     <Compile Include="Models\Master\FloorModel.cs" />
     <Compile Include="Models\Master\UserModel.cs" />
@@ -216,6 +218,10 @@
     <Content Include="Views\Elevator\Details.cshtml" />
     <Content Include="Views\User\Index.cshtml" />
     <Content Include="Views\Home\_ElevatorBlock.cshtml" />
+    <Content Include="Views\Elevator\Index.cshtml" />
+    <Content Include="Views\Floor\Index.cshtml" />
+    <Content Include="Views\LogIn\Index.cshtml" />
+    <Content Include="Views\LogIn\ChangePassword.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

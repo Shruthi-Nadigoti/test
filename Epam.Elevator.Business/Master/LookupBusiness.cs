@@ -1,9 +1,4 @@
-﻿using Epam.Elevator.DataAccess.Master;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System;
 using Epam.Elevator.Models.Master;
 using Epam.Elevator.DataAccess.Master.Interfaces;
 

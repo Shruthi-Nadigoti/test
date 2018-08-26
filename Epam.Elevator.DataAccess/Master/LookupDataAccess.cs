@@ -1,9 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Epam.Elevator.Models.Master;
 using System.Configuration;
 using System.Data.SqlClient;
 using Epam.Elevator.DataAccess.Master.Interfaces;

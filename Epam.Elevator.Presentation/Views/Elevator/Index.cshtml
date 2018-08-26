@@ -1,0 +1,69 @@
+﻿@model IEnumerable<Epam.Elevator.Presentation.Master.ElevatorModel>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ElevatorId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ElevatorName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MaxWeight)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FloorDuration)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CreatedByUserId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CreatedDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ModifiedByUserId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ModifiedDate)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ElevatorId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ElevatorName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MaxWeight)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FloorDuration)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CreatedByUserId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CreatedDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ModifiedByUserId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ModifiedDate)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new {  id=item.ElevatorId  }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ElevatorId  }) |
+            @Html.ActionLink("Delete", "Delete", new {  id=item.ElevatorId  })
+        </td>
+    </tr>
+}
+
+</table>
